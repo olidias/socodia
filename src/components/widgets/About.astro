@@ -1,0 +1,111 @@
+---
+import { Icon } from 'astro-icon';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
+import { aboutData } from '../../data/data';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+interface Item {
+  title: string;
+  description?: string;
+  icon?: string;
+  details?: string;
+}
+interface Portrait{
+  img: ImageMetadata;
+  description?: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  content?: string;
+  items?: Array<Item>;
+  isReversed?: boolean;
+  isAfterContent?: boolean;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  highlight,
+  content = await Astro.slots.render('content'),
+  items = [],
+  isReversed = false,
+  isAfterContent = false,
+} = Astro.props;
+
+---
+
+<section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-slate-800 py-14 md:py-16 scroll-mt-12']} id="about">
+  <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+    {
+      (title || subtitle || highlight) && (
+        <div class="mb-4 md:mx-auto text-center md:mb-6 max-w-3xl">
+          {highlight && (
+            <p
+              class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase mb-2"
+              set:html={highlight}
+            />
+          )}
+          {title && (
+            <h2
+              class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+              set:html={title}
+            />
+          )}
+          {subtitle && (
+            <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
+          )}
+        </div>
+      )
+    }
+  </div>
+  <div class="mx-auto max-w-7xl p-2 md:px-8">
+    <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
+      <div class="md:basis-1/2 self-center">
+        {content && <div class="mb-12 text-lg dark:text-slate-400 " set:html={content} />}
+        {
+          items && (
+            <div class="space-y-8">
+              {items.map(({ title: title2, description, details, icon }) => (
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <div class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-gray-50">
+                      <Icon name={icon ? icon : 'tabler:check'} class="w-5 h-5" />
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    {title2 && <h3 class="text-lg font-medium leading-6 dark:text-white">{title2}</h3>}
+                    {description && <p class="mt-2 text-muted dark:text-slate-400" set:html={description} />}
+                    { // TODO: details &&
+                      <label for="readmore" >{t('shared.readmore')}</label>
+                      <input type="checkbox" id="readmore" 
+                      class="dark:text-slate-400 text-muted absolute w-full h-full cursor-pointer opacity-0
+                      checked:mt-0 checked:max-h-0 checked:translate-x-1/2" />
+                      <i class="after:translate-x-1 after:rotate-45 before:-rotate-45 before:-translate-x-1 bg-slate-400 w-2 h-4 mt-4 -translate-x-2 absolute content-none"></i>
+                    <div class="hidden">{details}</div>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )
+        }
+      </div>
+      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+            <div class="relative ">
+                <img 
+                  src={aboutData.aboutImage.img?.src}
+                  alt={aboutData.aboutImage.alt}
+                  class="mx-auto rounded-full bg-gray-500 shadow-xl bg-cover"
+                  width={250}
+                  height={250}
+                  alt="Oli Dias"
+                  sizes="(max-width: 768px) 100vw, 432px"
+                />
+            </div>
+      </div>
+    </div>
+  </div>
+</section>
