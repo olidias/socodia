@@ -18,6 +18,8 @@ import wordpress from '../../public/techIcons/wordpress.svg';
 import dato from '../../public/techIcons/datocms.svg';
 import oli from '../../public/about/oli.webp';
 import fsma from '../../public/testimonials/fsma.webp';
+import wix from '../../public/techIcons/wix.svg';
+
 
 export const frontendToolsData = {
   techIcons: [
@@ -42,35 +44,10 @@ export const frontendToolsData = {
       url: 'https://react.dev/'
     },
     {
-      img: tailwind,
-      alt: 'Tailwind CSS icon',
-      url: 'https://tailwindcss.com/'
-    },
-    {
-      img: gatsby,
-      alt: 'Logo Gatsby Static Site Generator',
-      url: 'https://www.gatsbyjs.com/'
-    },
-    {
-      img: jekyll,
-      alt: 'Logo Jekyll Static Site Generator',
-      url: 'https://jekyllrb.com/'
-    },
-    {
       img: astro_dark,
       darkOptionImg: astro,
       alt: 'Astro Web Framework',
       url: 'https://astro.build/'
-    },
-    {
-      img: webpack,
-      alt: 'Logo Webpack Bundler',
-      url: 'https://webpack.js.org/'
-    },
-    {
-      img: vite,
-      alt: 'Package Bundler Vite',
-      url: 'https://vitejs.dev/'
     },
   ]
 };
@@ -96,15 +73,6 @@ export const backendToolsData = {
       img: mssql,
       alt: 'MS SQL Databases',
       url: 'https://www.microsoft.com/en-us/sql-server/'
-    },
-    {
-      img: {
-        ...mongodb,
-        height: 20,
-        width: 20
-      },
-      alt: 'MongoDB NoSQL Database',
-      url: 'https://www.mongodb.com/'
     }
   ]
 };
@@ -120,6 +88,11 @@ export const cmsToolsData = {
       img: dato,
       alt: 'DatoCMS',
       url: 'https://www.datocms.com/'
+    },
+    {
+      img: wix,
+      alt: 'WiX CMS',
+      url: 'https://www.wix.com/'
     }
   ]
 }

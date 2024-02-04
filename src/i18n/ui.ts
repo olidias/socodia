@@ -28,13 +28,13 @@ export const ui = {
     'entry.teaser': 'Unleash the full potential of your business with our customer-centric consulting services and individualised software!',
 
     'entry.item-fully-customized.title': 'Fully Customized Solutions',
-    'entry.item-fully-customized.description': 'Using the latest technologies and creative approaches, we come to the individualized application according to your imagination.',
+    'entry.item-fully-customized.description': 'Using modern technologies and creative approaches, we come to the individualized application according to your imagination.',
     
     'entry.item-customer-centricity.title': 'Customer Centricity',
-    'entry.item-customer-centricity.description': 'You should be able to determine where your website is heading. We are happy to guide you through the entire process!',
+    'entry.item-customer-centricity.description': 'You should be able to determine where your software is heading. We are happy to guide you through the entire process!',
 
     'entry.item-usability.title': 'Usability Focus',
-    'entry.item-usability.description': 'We especially value Usability. Through responsive and engaging websites, we appeal to a wide range of users.',
+    'entry.item-usability.description': 'We especially value Usability. Through responsive and engaging applications, we appeal to a wide range of users.',
 
     'entry.item-quality.title': 'Quality',
     'entry.item-quality.description': 'With selected tools we strive for only the highest quality.',
@@ -88,9 +88,9 @@ export const ui = {
 
     'reference.testimonial.fsma.title': 'Andri Koeferli',
     'reference.testimonial.fsma.subtitle': 'Fitter. Stronger. More Athletic.',
-    'reference.testimonial.fmsa.description': 'I was very happy with the service that Oli has provided.',
+    'reference.testimonial.fmsa.description': 'I was very happy with the service that Oli has provided and can fully recommend his services.',
 
-    'about.title': 'Who are we?',
+    'about.title': 'Who am I?',
     'about.subtitle': 'subtitle',
     'about.highlight': 'About us',
     'about.content': 'With more than 8 years of experience in software development at a number of companies and industries I have been able to gather many valuable insights to the aspects of software engineering and project management.<br /> \
@@ -114,13 +114,13 @@ export const ui = {
     'entry.teaser': 'Entfessle das volle Potential Deines Unternehmens mit unserer kundenorientierten Beratung und massgeschneiderter Software!',
 
     'entry.item-fully-customized.title': 'Komplett massgeschneiderte Lösungen',
-    'entry.item-fully-customized.description': 'Durch modernste Technologien und kreativen Ansätzen kommen wir zur individualisierten Applikation gemäss Deiner Vorstellung. ',
+    'entry.item-fully-customized.description': 'Durch moderne Technologien und kreativen Ansätzen kommen wir zur individualisierten Applikation gemäss Deiner Vorstellung. ',
 
     'entry.item-customer-centricity.title': 'Kundenzentrierung',
-    'entry.item-customer-centricity.description': 'Du sollst bestimmen können, wohin es mit deiner Website gehen soll. Wir unterstützen und beraten Dich im gesamten Prozess!',
+    'entry.item-customer-centricity.description': 'Du sollst bestimmen können, wohin es mit deiner Software gehen soll. Wir unterstützen und beraten Dich im gesamten Prozess!',
 
     'entry.item-usability.title': 'Usability Fokus',
-    'entry.item-usability.description': 'Wir legen besonderen Wert auf Usability. Durch responsive und bezaubernde Websites sprechen wir eine Vielzahl von Benutzer an.',
+    'entry.item-usability.description': 'Wir legen besonderen Wert auf Usability. Durch responsive und bezaubernde Applikationen sprechen wir eine Vielzahl von Benutzer an.',
 
     'entry.item-quality.title': 'Qualität',
     'entry.item-quality.description': 'Mit auserwählten Tools streben wir höchste Qualität an.',
@@ -175,9 +175,9 @@ export const ui = {
 
     'reference.testimonial.fsma.title': 'Andri Koeferli',
     'reference.testimonial.fsma.subtitle': 'Fitter. Stronger. More Athletic.',
-    'reference.testimonial.fmsa.description': 'Ich bin sehr glücklich mit dem Service, den mir Oli geboten hat. Er hat mir immer Kaffee gebracht und liebe Sachen gesagt. Auch mit dem Hund ist er spazieren gegagen! Stell dir vor.',
+    'reference.testimonial.fmsa.description': 'Ich bin sehr glücklich mit dem Service, den mir Oli geboten hat und kann es empfehlen, mit ihm zusammenzuarbeiten. ',
 
-    'about.title': 'Wer sind wir?',
+    'about.title': 'Wer bin ich?',
     'about.subtitle': 'subtitle',
     'about.highlight': 'Über uns',
     'about.content': 'Mit über 8 Jahre Berufserfahrung im Bereich Software Entwicklung in verschiedenen Branchen und Firmen habe ich schon viele wertvolle Erkenntnisse im Bezug auf verschiedenste Aspekte des Software Engineerings und der Software Projektabwicklung gewonnen. <br />\
