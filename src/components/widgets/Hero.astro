@@ -1,53 +1,30 @@
 ---
-import { Icon } from 'astro-icon';
-
+import { Icon } from "astro-icon";
+import BackgroundGradients from "./Hero/BackgroundGradients.astro"
 export interface Props {
   title?: string;
   subtitle?: string;
 }
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  content = await Astro.slots.render('content'),
-  callToAction = await Astro.slots.render('callToAction'),
-  callToAction2 = await Astro.slots.render('callToAction2'),
-  image = await Astro.slots.render('image'),
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("subtitle"),
+  content = await Astro.slots.render("content"),
+  callToAction = await Astro.slots.render("callToAction"),
+  callToAction2 = await Astro.slots.render("callToAction2"),
+  image = await Astro.slots.render("image"),
 } = Astro.props;
 ---
 
-
-<div class="-z-40 absolute scale-[14] mt-10">
-  <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
-    .path-0{
-      animation:pathAnim-0 40s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
-    @keyframes pathAnim-0{
-      0%{
-        d: path("M 0,400 L 0,150 C 123.73333333333329,120 247.46666666666658,90 433,117 C 618.5333333333334,144 865.8666666666668,228 1044,268 C 1222.1333333333332,308 1331.0666666666666,304 1440,300 L 1440,400 L 0,400 Z");
-      }
-      25%{
-        d: path("M 0,400 L 0,150 C 127.46666666666664,145.46666666666667 254.93333333333328,140.93333333333334 412,163 C 569.0666666666667,185.06666666666666 755.7333333333333,233.7333333333333 932,261 C 1108.2666666666667,288.2666666666667 1274.1333333333332,294.1333333333333 1440,300 L 1440,400 L 0,400 Z");
-      }
-      50%{
-        d: path("M 0,400 L 0,150 C 179.2,124.66666666666666 358.4,99.33333333333333 497,106 C 635.6,112.66666666666667 733.5999999999999,151.33333333333334 884,189 C 1034.4,226.66666666666666 1237.2,263.3333333333333 1440,300 L 1440,400 L 0,400 Z");
-      }
-      75%{
-        d: path("M 0,400 L 0,150 C 134.39999999999998,145.33333333333331 268.79999999999995,140.66666666666666 412,170 C 555.2,199.33333333333334 707.2,262.6666666666667 880,290 C 1052.8,317.3333333333333 1246.4,308.66666666666663 1440,300 L 1440,400 L 0,400 Z");
-      }
-      100%{
-        d: path("M 0,400 L 0,150 C 123.73333333333329,120 247.46666666666658,90 433,117 C 618.5333333333334,144 865.8666666666668,228 1044,268 C 1222.1333333333332,308 1331.0666666666666,304 1440,300 L 1440,400 L 0,400 Z");
-      }
-    }</style><defs><linearGradient id="gradient" x1="100%" y1="49%" x2="0%" y2="51%"><stop offset="5%" stop-color="#e6d6ec"></stop><stop offset="95%" stop-color="#bad6ff"></stop></linearGradient></defs><path d="M 0,400 L 0,150 C 123.73333333333329,120 247.46666666666658,90 433,117 C 618.5333333333334,144 865.8666666666668,228 1044,268 C 1222.1333333333332,308 1331.0666666666666,304 1440,300 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>
+<div class="-z-40 absolute top-0 overflow-x-hidden max-w-[100vw]">
+<BackgroundGradients />
 </div>
 <section class="relative md:-mt-[76px]">
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class="py-12 md:py-20">
-      <div class="text-center pb-10 md:pb-16 max-w-screen-lg mx-auto ">
+      <div class="text-center pb-10 md:pb-16 max-w-screen-lg mx-auto">
         {
           title && (
             <h1
@@ -57,18 +34,35 @@ const {
           )
         }
         <div class="max-w-3xl mx-auto">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300 text-slate-700" set:html={subtitle} />}
-          <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+          {
+            subtitle && (
+              <p
+                class="text-xl text-muted mb-6 dark:text-slate-300 text-slate-700"
+                set:html={subtitle}
+              />
+            )
+          }
+          <div
+            class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4"
+          >
             {
               callToAction && (
                 <div class="flex w-full sm:w-auto">
-                  {typeof callToAction === 'string' ? (
+                  {typeof callToAction === "string" ? (
                     <Fragment set:html={callToAction} />
                   ) : (
-                    <a class="btn btn-primary sm:mb-0 w-full" href={callToAction?.href} target="_blank" rel="noopener">
+                    <a
+                      class="btn btn-primary sm:mb-0 w-full"
+                      href={callToAction?.href}
+                      target="_blank"
+                      rel="noopener"
+                    >
                       {callToAction?.icon && (
                         <>
-                          <Icon name={callToAction.icon} class="w-5 h-5 mr-1 -ml-1.5" />{' '}
+                          <Icon
+                            name={callToAction.icon}
+                            class="w-5 h-5 mr-1 -ml-1.5"
+                          />{" "}
                         </>
                       )}
                       {callToAction?.text}
@@ -80,13 +74,16 @@ const {
             {
               callToAction2 && (
                 <div class="flex w-full sm:w-auto">
-                  {typeof callToAction2 === 'string' ? (
+                  {typeof callToAction2 === "string" ? (
                     <Fragment set:html={callToAction2} />
                   ) : (
                     <a class="btn w-full" href={callToAction2?.href}>
                       {callToAction2?.icon && (
                         <>
-                          <Icon name={callToAction2.icon} class="w-5 h-5 mr-1 -ml-1.5" />{' '}
+                          <Icon
+                            name={callToAction2.icon}
+                            class="w-5 h-5 mr-1 -ml-1.5"
+                          />{" "}
                         </>
                       )}
                       {callToAction2.text}
@@ -97,7 +94,7 @@ const {
             }
           </div>
         </div>
-        
+
         {content && <Fragment set:html={content} />}
       </div>
     </div>
