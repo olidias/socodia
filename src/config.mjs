@@ -9,7 +9,7 @@ const CONFIG = {
   description:
     'Modern tech company with accentuated focus on client centricity.',
 
-  defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  defaultTheme: 'light', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   language: 'en',
   textDirection: 'ltr',
