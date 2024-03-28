@@ -88,7 +88,7 @@ export const ui = {
 
     'reference.testimonial.fsma.title': 'Andri Koeferli',
     'reference.testimonial.fsma.subtitle': 'Fitter. Stronger. More Athletic.',
-    'reference.testimonial.fmsa.description': 'I was very happy with the service that Oli has provided and can fully recommend his services.',
+    'reference.testimonial.fmsa.description': 'Oli\'s work was fast, efficient, and personal. He took my individual wishes into account, brought in his own ideas and designed the website even better than I envisioned. I am very satisfied with the result and can definitely recommend him to others.',
 
     'about.title': 'Who am I?',
     'about.subtitle': 'subtitle',
@@ -169,13 +169,13 @@ export const ui = {
     'tools.cms': 'CMS',
     'tools.cms.description': 'Verschiedenste Möglichkeiten zur Integration von allerlei Content Management Systemen sind vorhanden.',
 
-    'reference.title': 'Das sagen unsere Kunden',
+    'reference.title': 'Das sagen die Kunden',
     'reference.subtitle': 'Referenzen',
     'reference.description': 'Schau dir die bisherigen Projekte an',
 
     'reference.testimonial.fsma.title': 'Andri Koeferli',
     'reference.testimonial.fsma.subtitle': 'Fitter. Stronger. More Athletic.',
-    'reference.testimonial.fmsa.description': 'Ich bin sehr glücklich mit dem Service, den mir Oli geboten hat und kann es empfehlen, mit ihm zusammenzuarbeiten. ',
+    'reference.testimonial.fmsa.description': 'Olis Arbeit war schnell, effizient und persönlich. Er ging auf meine individuellen Wünsche ein, brachte eigene Ideen ein und gestaltete die Website noch besser, als ich es mir vorgestellt hatte. Ich bin mit dem Ergebnis sehr zufrieden und kann ihn auf jeden Fall weiterempfehlen.',
 
     'about.title': 'Wer bin ich?',
     'about.subtitle': 'subtitle',
