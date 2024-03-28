@@ -6,15 +6,17 @@ export interface HeroProps {
   subtitle:string; 
 }
 export function Hero2(props: HeroProps) {
+
+
   return (
-    <WavyBackground className="max-w-4xl mx-auto" backgroundFill="#ffffff">
-      <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold text-center">
+    <WavyBackground className="max-w-4xl mx-auto">
+      <div className="text-2xl md:text-4xl lg:text-7xl text-white font-bold text-center my-10 mx-7 md:mx-auto">
       {
           props.image && (
-            <img src={props.image} className="mb-4 h-[calc(0.2*100vw)]" />
+            <img src={props.image} className="min-h-[15vh]" />
           )
-        }      </p>
-      <p className="text-xl text-muted mb-6 mx-auto dark:text-slate-300 text-slate-700 align-middle flex justify-center">
+        }      </div>
+      <p className="sm:mx-1 text-2xl dark:text-gray-300 text-muted mb-6 mx-4  text-slate-700 align-middle flex justify-center">
         {props.subtitle}
       </p>
     </WavyBackground>
