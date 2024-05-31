@@ -28,7 +28,7 @@ const {
       {highlight && (
         <div class="flex justify-center items-center mb-2">
         <p
-          class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase flex justify-self-center"
+          class="text-base text-primaryLight dark:text-blue-200 font-semibold tracking-wide uppercase flex justify-self-center"
           set:html={highlight}
         />
         </div>
@@ -46,11 +46,11 @@ const {
               <div class="flex flex-col items-center mr-4">
                 <div>
                   {index !== items.length - 1 ? (
-                    <div class="flex items-center ml-4 justify-center after:w-10 after:h-10 after:border-primary after:dark:border-blue-700 after:border-2 after:absolute after:rotate-45 after:scale-90">
+                    <div class="flex items-center ml-4 justify-center after:w-10 after:h-10 after:border-primaryLight after:dark:border-primaryLight after:border-2 after:absolute after:rotate-45 after:scale-90">
                       {icon && <Icon name={icon} class="w-6 h-6 text-primary dark:text-slate-200" />}
                     </div>
                   ) : (
-                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-primary border-2 bg-primary dark:bg-blue-700 dark:border-blue-700 ml-2 -mt-3">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-primary border-2 bg-primary dark:bg-primaryLight dark:border-primaryLight ml-2 -mt-3">
                       <Icon name={icon} class="w-6 h-6 text-white dark:text-slate-200" />
                     </div>
                   )}
