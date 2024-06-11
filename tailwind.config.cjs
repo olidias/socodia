@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         primary: 'var(--aw-color-primary)',
+        primaryLight: 'var(--aw-color-primary-light)',
         secondary: 'var(--aw-color-secondary)',
         accent: 'var(--aw-color-accent)',
       },

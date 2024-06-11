@@ -29,7 +29,7 @@ const { title, highlight, testimonials = [] } = Astro.props;
           <div class="mb-8 md:mx-auto text-center max-w-3xl">
             {highlight && (
               <p
-                class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase mb-2"
+                class="text-base text-primaryLight dark:text-blue-200 font-semibold tracking-wide uppercase mb-2"
                 set:html={highlight}
               />
             )}
@@ -61,10 +61,10 @@ const { title, highlight, testimonials = [] } = Astro.props;
                         alt={coverImage.alt}
                         class="sm:w-[150px] sm:h-[150px] rounded-full sm:mt-[-125px] w-[100px] h-[100px] mt-[-90px] dark:border-slate-600 border-slate-300 border-2"
                       />
-                      <p class="text-2xl italic font-serif my-5 text-center dark:text-slate-200 ">
-                        <span class="text-2xl ">"</span>
+                      <p class="text-lg italic font-serif my-5 text-center dark:text-slate-200 ">
+                        <span class="text-lg ">"</span>
                         {description}
-                        <span class="text-2xl">"</span>
+                        <span class="text-lg">"</span>
                       </p>
                         <span class="mr-2 opacity-75">-</span>
                         {author}

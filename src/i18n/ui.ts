@@ -40,7 +40,7 @@ export const ui = {
     'entry.item-quality.description': 'With selected tools we strive for only the highest quality.',
 
     'use-cases.title': 'Use Cases',
-    'use-cases.subtitle': 'We can help.',
+    'use-cases.subtitle': 'Here to help.',
     
 
     'use-cases.case1.title': 'Just started?', //TODO rename casing case-1
@@ -54,7 +54,7 @@ export const ui = {
 
 
     'procedure.title': 'Procedure',
-    'procedure.subtitle': 'How we find the optimal solution',
+    'procedure.subtitle': 'The way to the optimal solution',
 
     'procedure.step-1': 'First Touchpoint',
     'procedure.step-1.description': 'You describe your problem and your thoughts and we discuss a suitable solution.',
@@ -96,7 +96,7 @@ export const ui = {
     'about.content': 'With more than 8 years of experience in software development at a number of companies and industries I have been able to gather many valuable insights to the aspects of software engineering and project management.<br /> \
     \ After getting my bachelor\'s degree at university OST in computer science in 2019 I started working at a software consulting company and since 2023, I offer software projects on a smaller scale as a side business.',
 
-    'contact.title': 'We are looking forward to hearing from you!',
+    'contact.title': 'Looking forward to hearing from you!',
     'contact.highlight': 'Contact',
     'contact.requestconfirmation': 'Thank you for reaching out, ',
     'contact.confirmationText': 'We will get hold of you as soon as possible.',
@@ -127,7 +127,7 @@ export const ui = {
 
 
     'use-cases.title': 'Anwendungsfälle',
-    'use-cases.subtitle': 'Wir können helfen.',
+    'use-cases.subtitle': 'Hier, um zu helfen.',
 
     'use-cases.case1.title': 'Neu gestartet?',
     'use-cases.case1.description': 'Wir helfen mit dem Aufbau deiner neuen Unternehmenswebsite für einen erfolgreichen Start in den Betrieb!',
@@ -141,7 +141,7 @@ export const ui = {
 
 
     'procedure.title': 'Vorgehen',
-    'procedure.subtitle': 'So führen wir Dich zur optimalen Lösung',
+    'procedure.subtitle': 'Der Weg zur optimalen Lösung',
 
     'procedure.step-1': 'Erster Touchpoint',
     'procedure.step-1.description': 'Du beschreibst dein Problem und deine Gedanken und wir diskutieren über eine passende Lösung.',
