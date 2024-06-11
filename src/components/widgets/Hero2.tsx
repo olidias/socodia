@@ -16,7 +16,7 @@ export function Hero2(props: HeroProps) {
             <img src={props.image} className="min-h-[15vh]" />
           )
         }      </div>
-      <p className="sm:mx-1 text-2xl dark:text-gray-300 text-muted mb-6 mx-4  text-slate-700 align-middle flex justify-center">
+      <p className="sm:mx-1 text-2xl dark:text-gray-300 text-muted mb-6 self-center text-center text-slate-700 align-middle flex justify-center w-[280px] xl:w-[350px]">
         {props.subtitle}
       </p>
     </WavyBackground>
