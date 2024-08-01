@@ -25,14 +25,13 @@ export const POST: APIRoute = async ({ request }) => {
   console.log(process.env.SMTP_TOKEN);
   console.log(process.env.SMTP_HOST);
   console.log(process.env.SMTP_USER);
-  const res = await client.sendAsync(
+  await client.sendAsync(
     {
       text: `Subject: ${subject}\n\nContact Data: \nName: ${firstName} ${lastName}\nMobile: ${mobile}\nE-Mail: ${email}\n\n${message}`,
       from: 'Contact form socodia.com Website <info@socodia.com>',
       to: 'info@socodia.com',
       subject: `New Contact Request from ${firstName} ${lastName}`
     });
-  console.log(res);
   return new Response(
     JSON.stringify({
       message: "Success!"
