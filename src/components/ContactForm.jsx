@@ -16,25 +16,15 @@ export default function ContactForm({ lang }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const body = {
-      "firstName": firstName,
-      "lastName": lastName,
-      "email": email,
-      "mobile": mobile,
-      "subject": subject,
-      "message": message,
-    };
-    setDisableSend(true);
-
+    const formData = new FormData(event.target);
     console.log('sending mail');
-    
-    
+
     fetch("/api/sendMail", {
       method: "POST",
-      body: JSON.stringify(body)
+      body: formData
     }).then(response => {
       setDisableSend(false);
-      if(response.ok){
+      if (response.ok) {
         console.log(response);
         location.href = `/${lang}/contact-complete?name=${firstName}`
       }
@@ -53,6 +43,7 @@ export default function ContactForm({ lang }) {
             type="text"
             value={firstName}
             id="firstName"
+            name="firstName"
             onChange={e => { setFirstName(e.target.value) }}
             placeholder={lang === 'en' ? 'First Name*' : 'Vorname*'}
             required={true}
@@ -61,6 +52,7 @@ export default function ContactForm({ lang }) {
           <input
             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             id="lastName"
+            name="lastName"
             type="text"
             onChange={e => { setLastName(e.target.value) }}
             placeholder={lang === 'en' ? 'Last Name*' : 'Nachname*'}
@@ -71,6 +63,7 @@ export default function ContactForm({ lang }) {
             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             type="email"
             id="email"
+            name="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder="Email*"
@@ -81,17 +74,19 @@ export default function ContactForm({ lang }) {
             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             type="text"
             id="mobile"
+            name="mobile"
             value={mobile}
             onChange={e => setMobile(e.target.value)}
             placeholder="Mobile*"
           />
           <div className="sm:col-span-2">
-            <input  className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="text"
-            id="subject"
-            value={subject}
-            onChange={e => setSubject(e.target.value)}
-            placeholder={lang === 'en' ? 'Subject*' : 'Betreff*'}
+            <input className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              type="text"
+              id="subject"
+              name="subject"
+              value={subject}
+              onChange={e => setSubject(e.target.value)}
+              placeholder={lang === 'en' ? 'Subject*' : 'Betreff*'}
             />
           </div>
           <div className="sm:col-span-2">
@@ -99,6 +94,7 @@ export default function ContactForm({ lang }) {
               placeholder={lang === 'en' ? 'Message*' : 'Nachricht*'}
               className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               id="message"
+              name="message"
               onChange={e => setMessage(e.target.value)}
               value={message}
             ></textarea>
