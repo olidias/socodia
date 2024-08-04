@@ -7,7 +7,7 @@ const CONFIG = {
 
   title: 'Socodia - Software Company Dias',
   description:
-    'Modern tech company with accentuated focus on client centricity.',
+    'Modern tech company with accentuated focus on client centricity by Oli Dias. Solid Software. Competent Consulting.',
 
   defaultTheme: 'light', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
