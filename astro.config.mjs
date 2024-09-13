@@ -23,15 +23,25 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin]
   },
-  integrations: [react(), tailwind({
+  integrations: [
+    react(), 
+    tailwind({
     config: {
       applyBaseStyles: false
+    }}),
+    sitemap({
+      filter: (page) => 
+        page !== 'https://socodia.com/en/contact-complete' && 
+        page !== 'https://socodia.com/de/contact-complete',
+      lastmod: new Date()
     }
-  }), sitemap(), mdx(), ...whenExternalScripts(() => partytown({
-    config: {
-      forward: ['dataLayer.push']
-    }
-  }))],
+    ), 
+    mdx(), 
+    ...whenExternalScripts(() => partytown({
+      config: {
+        forward: ['dataLayer.push']
+      }}))
+  ],
   vite: {
     resolve: {
       alias: {
