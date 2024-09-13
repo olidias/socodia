@@ -12,8 +12,9 @@ import node from '../../public/techIcons/nodejs.svg';
 import wordpress from '../../public/techIcons/wordpress.svg';
 import dato from '../../public/techIcons/datocms.svg';
 import oli from '../../public/about/oli.webp';
-import fsma from '../../public/testimonials/fsma.webp';
 import wix from '../../public/techIcons/wix.svg';
+import fsma from '../../public/testimonials/fsma.webp';
+import trasloc from '../../public/testimonials/alessandro.webp';
 
 
 export const frontendToolsData = {
@@ -101,6 +102,15 @@ export const testimonialsData = [
     title: '',
     subtitle: '',
     description: 'Here is the description'
+  },
+  {
+    img: trasloc,
+    alt: 'Traslocorsino.',
+    author: 'Alessandro Orsino',
+    url: 'https://traslocorsino.ch',
+    title: '',
+    subtitle: '',
+    description: ''
   }
 ]
 
