@@ -21,7 +21,6 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<!-- Hero Widget ******************* -->
 <Hero2 client:load image="/logo.svg" subtitle={t('hero.subtitle')} >
   <Fragment slot='title'>
     <img src="/logo.svg" />
