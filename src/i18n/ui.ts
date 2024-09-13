@@ -29,7 +29,7 @@ export const ui = {
 
     'entry.item-fully-customized.title': 'Fully Customized Solutions',
     'entry.item-fully-customized.description': 'Using modern technologies and creative approaches, we come to the individualized application according to your imagination.',
-    
+
     'entry.item-customer-centricity.title': 'Customer Centricity',
     'entry.item-customer-centricity.description': 'You should be able to determine where your software is heading. We are happy to guide you through the entire process!',
 
@@ -41,7 +41,7 @@ export const ui = {
 
     'use-cases.title': 'Use Cases',
     'use-cases.subtitle': 'Here to help.',
-    
+
 
     'use-cases.case1.title': 'Just started?', //TODO rename casing case-1
     'use-cases.case1.description': 'We build your new business website for a successful start to operations!',
@@ -81,7 +81,7 @@ export const ui = {
 
     'tools.cms': 'CMS',
     'tools.cms.description': 'There are a number of ways to integrate various CMS with our solutions.',
-    
+
     'reference.title': 'Testimonials',
     'reference.subtitle': 'References',
     'reference.description': 'Check out previous projects.',
@@ -89,6 +89,10 @@ export const ui = {
     'reference.testimonial.fsma.title': 'Andri Koeferli',
     'reference.testimonial.fsma.subtitle': 'Fitter. Stronger. More Athletic.',
     'reference.testimonial.fmsa.description': 'Oli\'s work was fast, efficient, and personal. He took my individual wishes into account, brought in his own ideas and designed the website even better than I envisioned. I am very satisfied with the result and can definitely recommend him to others.',
+
+    'reference.testimonial.traslocorsino.title': 'Alessandro Orsino',
+    'reference.testimonial.traslocorsino.subtitle': 'Traslocorsino.',
+    'reference.testimonial.traslocorsino.description': 'I have finally automated the renting mechanism of my business with the help of Oli, which saves me a lot of time. His work was professional and high quality at all times.',
 
     'about.title': 'Who am I?',
     'about.subtitle': 'subtitle',
@@ -176,6 +180,10 @@ export const ui = {
     'reference.testimonial.fsma.title': 'Andri Koeferli',
     'reference.testimonial.fsma.subtitle': 'Fitter. Stronger. More Athletic.',
     'reference.testimonial.fmsa.description': 'Olis Arbeit war schnell, effizient und persönlich. Er ging auf meine individuellen Wünsche ein, brachte eigene Ideen ein und gestaltete die Website noch besser, als ich es mir vorgestellt hatte. Ich bin mit dem Ergebnis sehr zufrieden und kann ihn auf jeden Fall weiterempfehlen.',
+
+    'reference.testimonial.traslocorsino.title': 'Alessandro Orsino',
+    'reference.testimonial.traslocorsino.subtitle': 'Traslocorsino.',
+    'reference.testimonial.traslocorsino.description': 'Ich konnte dank Oli\'s Hilfe endlich den Vermietungsmechanismus meiner Firma automatisieren, was mir viel Zeit erspart. Seine Arbeit war stets professionell und von höchster Qualität.',
 
     'about.title': 'Wer bin ich?',
     'about.subtitle': 'subtitle',
