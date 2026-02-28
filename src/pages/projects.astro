@@ -1,0 +1,50 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import ProjectCard from '~/components/ProjectCard.astro';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<PageLayout>
+  <h1 class="mb-4 font-heading font-bold text-primary dark:text-blue-200 text-4xl md:text-5xl text-center leading-tighter tracking-tighter">
+    {t('projects.title')}
+  </h1>
+  <p class="mx-auto mb-8 max-w-3xl text-muted dark:text-slate-400 text-xl sm:text-center">{t('projects.intro')}</p>
+
+  <section class="mx-auto max-w-4xl">
+    <ProjectCard
+      title={t('projects.webapp_roads.title')}
+      period={t('projects.webapp_roads.period')}
+      role={t('projects.webapp_roads.role')}
+      tech={t('projects.webapp_roads.tech')}
+      highlights={[t('projects.webapp_roads.highlight1'), t('projects.webapp_roads.highlight2'), t('projects.webapp_roads.highlight3'), t('projects.webapp_roads.highlight4')]}
+    />
+    <ProjectCard
+      title={t('projects.oprisk.title')}
+      period={t('projects.oprisk.period')}
+      role={t('projects.oprisk.role')}
+      tech={t('projects.oprisk.tech')}
+      highlights={[t('projects.oprisk.highlight1'), t('projects.oprisk.highlight2'), t('projects.oprisk.highlight3'), t('projects.oprisk.highlight4'), t('projects.oprisk.highlight5')]}
+    />
+    <ProjectCard
+      title={t('projects.advisory.title')}
+      period={t('projects.advisory.period')}
+      role={t('projects.advisory.role')}
+      tech={t('projects.advisory.tech')}
+      highlights={[t('projects.advisory.highlight1'), t('projects.advisory.highlight2'), t('projects.advisory.highlight3')]}
+    />
+    <ProjectCard
+      title={t('projects.webprojects.title')}
+      period={t('projects.webprojects.period')}
+      role={t('projects.webprojects.role')}
+      tech={t('projects.webprojects.tech')}
+      highlights={[t('projects.webprojects.highlight1'), t('projects.webprojects.highlight2'), t('projects.webprojects.highlight3')]}
+    />
+  </section>
+
+  <div class="mt-8 text-center cta">
+    <p class="text-lg">{t('projects.cta')}</p>
+  </div>
+</PageLayout>
