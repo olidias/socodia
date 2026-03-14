@@ -39,44 +39,45 @@ const {
 ---
 
 <section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-slate-800 py-14 md:py-16 scroll-mt-12']} id="about">
-  <div class="mx-auto max-w-4xl">
+  <div class="max-w-4xl mx-auto">
     {
       (title || subtitle || highlight) && (
-        <div class="md:mx-auto mb-4 md:mb-6 max-w-3xl text-center">
+        <div class="mb-4 md:mx-auto text-center md:mb-6 max-w-3xl">
           {highlight && (
             <p
-              class="mb-2 font-semibold text-primaryLight dark:text-blue-200 text-base uppercase tracking-wide"
+              class="text-base text-primaryLight dark:text-blue-200 font-semibold tracking-wide uppercase mb-2"
               set:html={highlight}
             />
           )}
           {title && (
             <h2
-              class="mb-4 font-heading font-bold text-4xl md:text-5xl leading-tighter tracking-tighter"
+              class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
               set:html={title}
             />
           )}
           {subtitle && (
-            <p class="mx-auto max-w-3xl text-muted dark:text-slate-400 text-xl sm:text-center" set:html={subtitle} />
+            <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
           )}
         </div>
       )
     }
   </div>
-  <div class="flex md:flex-row flex-col md:justify-center md:items-center gap-8 mx-auto p-2 md:px-8 max-w-7xl">
-    <div class="self-center md:basis-1/2">
-      {content && <div class="mb-12 dark:text-slate-400 text-lg" set:html={content} />}
+  <div class="mx-auto max-w-7xl p-2 md:px-8 flex flex-col md:flex-row md:items-center md:justify-center gap-8">
+    <div class="md:basis-1/2 self-center">
+      {content && <div class="mb-12 text-lg dark:text-slate-400 " set:html={content} />}
+      <a href="/projects" class="text-primary underline mt-4 block">{t('about.projectsLink')}</a>
       {
         items && (
           <div class="space-y-8">
             {items.map(({ title: title2, description, details, icon }) => (
               <div class="flex">
                 <div class="flex-shrink-0">
-                  <div class="flex justify-center items-center bg-primary rounded-full w-7 h-7 text-gray-50">
+                  <div class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-gray-50">
                     <Icon name={icon ? icon : 'tabler:check'} class="w-5 h-5" />
                   </div>
                 </div>
                 <div class="ml-4">
-                  {title2 && <h3 class="font-medium dark:text-white text-lg leading-6">{title2}</h3>}
+                  {title2 && <h3 class="text-lg font-medium leading-6 dark:text-white">{title2}</h3>}
                   {description && <p class="mt-2 text-muted dark:text-slate-400" set:html={description} />}
                   { // TODO: details &&
                     <label for="readmore" >{t('shared.readmore')}</label>
