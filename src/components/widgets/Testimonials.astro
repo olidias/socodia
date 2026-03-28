@@ -23,7 +23,7 @@ const { title, highlight, testimonials = [] } = Astro.props;
   >
   </div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12 ">
+    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
       {
         (title || highlight) && (
           <div class="mb-8 md:mx-auto text-center max-w-3xl">
@@ -42,51 +42,57 @@ const { title, highlight, testimonials = [] } = Astro.props;
           </div>
         )
       }
-      <div class={`dark:text-white items-stretch mx-auto `}>
-        <div
-          class="relative w-full "
-        >
-          <div
-            class="overflow-hidden flex-row justify-center flex pt-[4rem] sm:pt-[6rem]"
-          >
-            {
-              testimonials.map(
-                ({ author, description, url, coverImage }, i) => (
-                  <div
-                    class={`flex flex-col justify-center pb-5 mx-auto duration-500 ease-linear ${i > 0 ? "md:w-1/2" : ""}`}
-                  >
-                    <div class="min-w-[300px] flex flex-col p-10 items-center bg-blue-50 dark:bg-slate-800 rounded mx-auto shadow-lg hover:shadow-md">
-                      <img
-                        src={coverImage.src}
-                        alt={coverImage.alt}
-                        class="sm:w-[150px] sm:h-[150px] rounded-full sm:mt-[-125px] w-[100px] h-[100px] mt-[-90px] dark:border-slate-600 border-slate-300 border-2"
-                      />
-                      <p class="text-lg italic font-serif my-5 text-center dark:text-slate-200 ">
-                        <span class="text-lg ">"</span>
-                        {description}
-                        <span class="text-lg">"</span>
-                      </p>
+      <div class="dark:text-white mx-auto max-w-2xl">
+        <div class="relative w-full" id="testimonial-carousel">
+          <!-- Slides container -->
+          <div class="overflow-hidden pt-[4rem] sm:pt-[6rem]">
+            <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-track">
+              {
+                testimonials.map(
+                  ({ author, description, url, coverImage }, i) => (
+                    <div
+                      class="w-full flex-shrink-0 flex flex-col justify-center pb-5 px-2"
+                      data-testimonial-slide
+                    >
+                      <div class="flex flex-col p-10 items-center bg-blue-50 dark:bg-slate-800 rounded-xl mx-auto shadow-lg hover:shadow-md w-full max-w-lg">
+                        <img
+                          src={coverImage.src}
+                          alt={coverImage.alt}
+                          class="sm:w-[150px] sm:h-[150px] rounded-full sm:mt-[-125px] w-[100px] h-[100px] mt-[-90px] dark:border-slate-600 border-slate-300 border-2 object-cover"
+                        />
+                        <p class="text-lg italic font-serif my-5 text-center dark:text-slate-200">
+                          <span class="text-lg">&ldquo;</span>
+                          {description}
+                          <span class="text-lg">&rdquo;</span>
+                        </p>
                         <span class="mr-2 opacity-75">-</span>
                         {author}
-                      <a id="url" href={url} class="italic opacity-50">
-                        {url}
-                      </a>
+                        {url && (
+                          <a href={url} class="italic opacity-50 mt-1 text-sm hover:opacity-75 transition-opacity">
+                            {url}
+                          </a>
+                        )}
+                      </div>
                     </div>
-                  </div>
+                  )
                 )
-              )
-            }
-            {
-            testimonials.length > 1 ? (
+              }
+            </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          {testimonials.length > 1 && (
             <button
               type="button"
-              class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              id="testimonial-prev"
+              class="absolute top-1/2 -translate-y-1/2 left-0 sm:-left-4 z-30 flex items-center justify-center cursor-pointer group focus:outline-none"
+              aria-label="Previous testimonial"
             >
               <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-200/70 dark:bg-gray-700/50 group-hover:bg-gray-300/80 dark:group-hover:bg-gray-600/70 transition-colors duration-200 shadow-sm"
               >
                 <svg
-                  class="w-4 h-4 text-white dark:text-gray-800"
+                  class="w-4 h-4 text-gray-600 dark:text-gray-300"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -99,18 +105,19 @@ const { title, highlight, testimonials = [] } = Astro.props;
                     stroke-width="2"
                     d="M5 1 1 5l4 4"></path>
                 </svg>
-                <span class="sr-only">Previous</span>
               </span>
             </button>
             <button
               type="button"
-              class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              id="testimonial-next"
+              class="absolute top-1/2 -translate-y-1/2 right-0 sm:-right-4 z-30 flex items-center justify-center cursor-pointer group focus:outline-none"
+              aria-label="Next testimonial"
             >
               <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-200/70 dark:bg-gray-700/50 group-hover:bg-gray-300/80 dark:group-hover:bg-gray-600/70 transition-colors duration-200 shadow-sm"
               >
                 <svg
-                  class="w-4 h-4 text-white dark:text-gray-800"
+                  class="w-4 h-4 text-gray-600 dark:text-gray-300"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -123,13 +130,75 @@ const { title, highlight, testimonials = [] } = Astro.props;
                     stroke-width="2"
                     d="m1 9 4-4-4-4"></path>
                 </svg>
-                <span class="sr-only">Next</span>
               </span>
             </button>
-            ) : ''}
-          </div>
+          )}
+
+          <!-- Dot indicators -->
+          {testimonials.length > 1 && (
+            <div class="flex justify-center gap-2 mt-6" id="testimonial-dots">
+              {testimonials.map((_, i) => (
+                <button
+                  type="button"
+                  class:list={[
+                    'w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer',
+                    i === 0 ? 'bg-primary dark:bg-blue-400 scale-110' : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+                  ]}
+                  data-testimonial-dot={i}
+                  aria-label={`Go to testimonial ${i + 1}`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  function initCarousel() {
+    const track = document.getElementById('testimonial-track');
+    const prevBtn = document.getElementById('testimonial-prev');
+    const nextBtn = document.getElementById('testimonial-next');
+    const dots = document.querySelectorAll('[data-testimonial-dot]');
+    const slides = document.querySelectorAll('[data-testimonial-slide]');
+
+    if (!track || slides.length <= 1) return;
+
+    let current = 0;
+    const total = slides.length;
+
+    function goTo(index: number) {
+      current = ((index % total) + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('bg-primary', i === current);
+        dot.classList.toggle('dark:bg-blue-400', i === current);
+        dot.classList.toggle('scale-110', i === current);
+        dot.classList.toggle('bg-gray-300', i !== current);
+        dot.classList.toggle('dark:bg-gray-600', i !== current);
+      });
+    }
+
+    prevBtn?.addEventListener('click', () => goTo(current - 1));
+    nextBtn?.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const index = Number(dot.getAttribute('data-testimonial-dot'));
+        goTo(index);
+      });
+    });
+
+    // Auto-advance every 6 seconds
+    let interval = setInterval(() => goTo(current + 1), 6000);
+    const carousel = document.getElementById('testimonial-carousel');
+    carousel?.addEventListener('mouseenter', () => clearInterval(interval));
+    carousel?.addEventListener('mouseleave', () => {
+      interval = setInterval(() => goTo(current + 1), 6000);
+    });
+  }
+
+  initCarousel();
+  document.addEventListener('astro:after-swap', initCarousel);
+</script>

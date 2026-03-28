@@ -1,15 +1,31 @@
 ---
 // ProjectCard.astro
-// Props: title, period, role, tech, highlights (array)
 const { title, period, role, tech, highlights } = Astro.props;
+const techItems = tech ? tech.split(',').map((t: string) => t.trim()) : [];
 ---
-<article class="bg-white dark:bg-slate-800 shadow-md mb-8 p-6 rounded-lg">
-  <h2 class="mb-2 font-bold text-primary dark:text-blue-200 text-xl">{title}</h2>
-  <div class="mb-1 text-slate-500 dark:text-slate-300 text-sm">
-    <span>{period}</span> | <span class="italic">{role}</span>
+<article class="group relative bg-white dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700/50 rounded-xl p-5 sm:p-8 transition-all duration-300 hover:shadow-xl hover:border-primary/20 dark:hover:border-blue-400/20 hover:-translate-y-1">
+  <div class="mb-4">
+    <div class="flex items-start justify-between gap-3 mb-2">
+      <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-blue-300 transition-colors duration-300">{title}</h2>
+    </div>
+    <span class="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-primary/10 text-primary dark:bg-blue-400/10 dark:text-blue-300 border border-primary/20 dark:border-blue-400/20">
+      {role}
+    </span>
   </div>
-  <div class="mb-2 text-sm"><span class="font-semibold">Tech:</span> {tech}</div>
-  <ul class="space-y-1 pl-5 list-disc">
-    {highlights && highlights.map ? highlights.map((h, i) => <li key={i}>{h}</li>) : null}
+  <p class="text-sm text-muted dark:text-slate-400 mb-4">{period}</p>
+  <div class="flex flex-wrap gap-2 mb-5">
+    {techItems.map((item: string) => (
+      <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300">
+        {item}
+      </span>
+    ))}
+  </div>
+  <ul class="space-y-2">
+    {highlights && highlights.map((h: string) => (
+      <li class="flex items-start gap-2.5 text-sm text-gray-600 dark:text-slate-400">
+        <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60 dark:bg-blue-400/60"></span>
+        {h}
+      </li>
+    ))}
   </ul>
 </article>

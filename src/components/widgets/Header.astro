@@ -36,35 +36,39 @@ const {
   showNavigation
 } = Astro.props;
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const langPrefix = lang === 'de' ? '/de' : '';
+
+const homeBase = langPrefix || '/';
+const anchor = (hash: string) => `${homeBase}#${hash}`;
+
 const links = [
     {
       textKey: 'header.useCases',
-      href: '#use-cases',
+      href: anchor('use-cases'),
     },
     {
       textKey: 'header.procedure',
-      href: '#procedure'
+      href: anchor('procedure'),
     },
     {
       textKey: 'header.tools',
-      href: '#tools'
+      href: anchor('tools'),
     },
     {
       textKey: 'header.about',
-      href: '#about'
+      href: anchor('about'),
     },
     {
       textKey: 'projects.title',
-      href: '/projects',
+      href: `${langPrefix}/projects`,
     },
     {
       textKey: 'header.contact',
-      href: '#contact'
+      href: anchor('contact'),
     },
   ];
-;
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
 <header

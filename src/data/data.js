@@ -13,6 +13,7 @@ import wordpress from '../../public/techIcons/wordpress.svg';
 import dato from '../../public/techIcons/datocms.svg';
 import oli from '../../public/about/oli.webp';
 import fsma from '../../public/testimonials/fsma.webp';
+import testimonialPlaceholder from '../../public/testimonials/placeholder.svg';
 import wix from '../../public/techIcons/wix.svg';
 
 
@@ -98,6 +99,15 @@ export const testimonialsData = [
     alt: 'Fitter. Stronger. More Athletic.',
     author: 'Andri Koeferli',
     url: 'https://fitterstrongermoreathletic.com',
+    title: '',
+    subtitle: '',
+    description: 'Here is the description'
+  },
+  {
+    img: testimonialPlaceholder,
+    alt: 'Marco Bellini',
+    author: 'Marco Bellini',
+    url: '',
     title: '',
     subtitle: '',
     description: 'Here is the description'
