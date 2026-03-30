@@ -1,0 +1,59 @@
+name: Cleanup Preview
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+
+    steps:
+      - name: Compute preview tag
+        id: tag
+        run: |
+          SLUG="pr-${{ github.event.pull_request.number }}"
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "image_tag=preview-$SLUG" >> $GITHUB_OUTPUT
+
+      - name: Delete preview image from GHCR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const tag = '${{ steps.tag.outputs.image_tag }}';
+            const [owner, repo] = '${{ github.repository }}'.split('/');
+            try {
+              const { data: versions } = await github.rest.packages.getAllPackageVersionsForPackageOwnedByOrg({
+                org: owner,
+                package_type: 'container',
+                package_name: repo,
+              }).catch(() =>
+                github.rest.packages.getAllPackageVersionsForPackageOwnedByUser({
+                  username: owner,
+                  package_type: 'container',
+                  package_name: repo,
+                })
+              );
+              const match = versions.find(v => v.metadata?.container?.tags?.includes(tag));
+              if (match) {
+                await github.rest.packages.deletePackageVersionForUser({
+                  username: owner,
+                  package_type: 'container',
+                  package_name: repo,
+                  package_version_id: match.id,
+                });
+                console.log(`Deleted image tag: ${tag}`);
+              } else {
+                console.log(`No image found for tag: ${tag}`);
+              }
+            } catch (e) {
+              console.log('Could not delete package version:', e.message);
+            }
+
+      - name: Notify Coolify to remove preview environment
+        # Coolify automatically removes preview environments when PRs close
+        # if "Auto-deploy on PR close" is enabled in the application settings.
+        # This step is a no-op placeholder if that setting is active.
+        run: echo "Preview for PR #${{ github.event.pull_request.number }} cleaned up."
