@@ -59,6 +59,7 @@ const {
           </div>
         )
       }
+      <slot name="above-grid" />
       <div class={`grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-12 dark:text-white items-stretch`}>
         {
           items.map(({ title, description, icon, techIcons: techIcon }) => (

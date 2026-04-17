@@ -82,6 +82,9 @@ export const ui = {
     'tools.cms': 'CMS',
     'tools.cms.description': 'There are a number of ways to integrate various CMS into the solutions.',
 
+    'tools.ai': 'AI Augmented Delivery',
+    'tools.ai.description': 'Leveraging AI-powered tools to accelerate development, improve code quality, and deliver faster.',
+
     'reference.title': 'Testimonials',
     'reference.subtitle': 'References',
     'reference.description': 'Check out previous projects.',
@@ -103,6 +106,7 @@ export const ui = {
     'projects.webapp_roads.highlight2': 'Fullstack development with .NET, Web Forms, React, Oracle, ArcGIS, and Selenium',
     'projects.webapp_roads.highlight3': 'Reduced technical debt while developing change requests to extend the feature range',
     'projects.webapp_roads.highlight4': 'Took on infrastructure responsibilities and ensured quality through automated testing and CI/CD',
+    'projects.webapp_roads.highlight5': 'AI augmented delivery using Claude and GitHub Copilot to accelerate development and improve code quality',
     'projects.oprisk.highlight1': 'Part of a large scrum team (up to 11 people) building an operational risk management platform',
     'projects.oprisk.highlight2': 'Fullstack development with .NET 8, Angular, MSSQL, Cypress, TeamCity, and Octopus',
     'projects.oprisk.highlight3': 'Comprehensive testing strategy: unit, integration, and E2E tests',
@@ -135,7 +139,7 @@ export const ui = {
     'shared.readmore': 'Read more',
 
     'projects.title': 'Projects & References',
-    'projects.intro': 'A selection of projects showcasing my expertise in fullstack software development, technical leadership, and web development. I deliver robust solutions for business-critical applications — with personal ownership, modern technologies, and a customer-focused approach.',
+    'projects.intro': 'A selection of projects showcasing my expertise in fullstack software development, technical leadership, and web development. I deliver robust solutions for business-critical applications — with ownership, modern technologies, and a customer-focused approach.',
     'projects.leadership': 'As a line manager, I led a team of 7 developers — conducting appraisals, facilitating salary conversations, resolving conflicts, and ensuring knowledge flow through regular team meetings.',
     'projects.cta': 'Looking for a reliable partner for your next software project or digital transformation?',
     'projects.ctaButton': 'Get in touch',
@@ -152,7 +156,7 @@ export const ui = {
     'projects.advisory.role': 'Fullstack Developer',
     'projects.advisory.tech': '.NET, Angular, TypeScript, MSSQL, Jenkins, Octopus',
     'projects.webprojects.title': 'Custom Web Projects',
-    'projects.webprojects.period': 'Ongoing',
+    'projects.webprojects.period': '2023 - Present',
     'projects.webprojects.role': 'Fullstack/Web Developer',
     'projects.webprojects.tech': 'Astro, Wix, DatoCMS, Storyblok, React, TypeScript',
   },
@@ -220,6 +224,9 @@ export const ui = {
     'tools.cms': 'CMS',
     'tools.cms.description': 'Verschiedenste Möglichkeiten zur Integration von allerlei Content Management Systemen sind vorhanden.',
 
+    'tools.ai': 'AI Augmented Delivery',
+    'tools.ai.description': 'Einsatz von KI-gestützten Tools zur Beschleunigung der Entwicklung, Verbesserung der Codequalität und schnellerer Auslieferung.',
+
     'reference.title': 'Das sagen die Kunden',
     'reference.subtitle': 'Referenzen',
     'reference.description': 'Schau Dir die bisherigen Projekte an',
@@ -247,7 +254,7 @@ export const ui = {
     'shared.readmore': 'Mehr',
 
     'projects.title': 'Projekte & Referenzen',
-    'projects.intro': 'Eine Auswahl an Projekten, die meine Erfahrung in der Fullstack-Softwareentwicklung, technischen Führung und Webentwicklung zeigen. Ich liefere robuste Lösungen für geschäftskritische Anwendungen — mit persönlicher Verantwortung, modernen Technologien und kundenorientiertem Ansatz.',
+    'projects.intro': 'Eine Auswahl an Projekten, die meine Erfahrung in der Fullstack-Softwareentwicklung, technischen Führung und Webentwicklung zeigen. Ich liefere robuste Lösungen für geschäftskritische Anwendungen — mit Verantwortungsbewusstsein, modernen Technologien und kundenorientiertem Ansatz.',
     'projects.leadership': 'Als Linienvorgesetzter habe ich ein Team von 7 Entwicklern geführt — Mitarbeitergespräche und Lohnverhandlungen durchgeführt, bei Konflikten unterstützt und durch regelmässige Teammeetings den Informationsfluss sichergestellt.',
     'projects.cta': 'Auf der Suche nach einem zuverlässigen Partner für Ihr nächstes Softwareprojekt oder Ihre digitale Transformation?',
     'projects.ctaButton': 'Kontakt aufnehmen',
@@ -259,6 +266,7 @@ export const ui = {
     'projects.webapp_roads.highlight2': 'Fullstack-Entwicklung mit .NET, Web Forms, React, Oracle, ArcGIS und Selenium',
     'projects.webapp_roads.highlight3': 'Reduktion technischer Schulden bei gleichzeitiger Entwicklung von Change Requests zur Erweiterung des Funktionsumfangs',
     'projects.webapp_roads.highlight4': 'Infrastrukturverantwortung und Qualitätssicherung durch automatisierte Tests und CI/CD',
+    'projects.webapp_roads.highlight5': 'AI Augmented Delivery mit Claude und GitHub Copilot zur Beschleunigung der Entwicklung und Verbesserung der Codequalität',
     'projects.oprisk.title': 'OpRisk-Kontrollmanagement-Plattform',
     'projects.oprisk.period': '01/2022 – 04/2024',
     'projects.oprisk.role': 'Fullstack Entwickler',
@@ -277,7 +285,7 @@ export const ui = {
     'projects.advisory.highlight3': 'Datenbankmigrationen verschiedener CRM-Systeme',
     'projects.advisory.highlight4': 'Vorantreiben interner Initiativen wie Tastaturnavigation und Schulungsumgebungen',
     'projects.webprojects.title': 'Individuelle Webprojekte',
-    'projects.webprojects.period': 'Laufend',
+    'projects.webprojects.period': '2023 - Heute',
     'projects.webprojects.role': 'Fullstack/Web Entwickler',
     'projects.webprojects.tech': 'Astro, Wix, DatoCMS, Storyblok, React, TypeScript',
     'projects.webprojects.highlight1': 'Umsetzung individueller Websites und Weblösungen für verschiedene Kunden',

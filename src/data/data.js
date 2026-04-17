@@ -15,6 +15,8 @@ import oli from '../../public/about/oli.webp';
 import fsma from '../../public/testimonials/fsma.webp';
 import testimonialPlaceholder from '../../public/testimonials/placeholder.svg';
 import wix from '../../public/techIcons/wix.svg';
+import claude from '../../public/techIcons/claude.svg';
+import copilot from '../../public/techIcons/copilot.svg';
 import mentalk from '../../public/testimonials/mentalk.png';
 
 export const frontendToolsData = {
@@ -89,6 +91,21 @@ export const cmsToolsData = {
       img: wix,
       alt: 'WiX CMS',
       url: 'https://www.wix.com/'
+    }
+  ]
+}
+
+export const aiToolsData = {
+  techIcons: [
+    {
+      img: claude,
+      alt: 'Claude AI by Anthropic',
+      url: 'https://claude.ai/'
+    },
+    {
+      img: copilot,
+      alt: 'GitHub Copilot',
+      url: 'https://github.com/features/copilot'
     }
   ]
 }
