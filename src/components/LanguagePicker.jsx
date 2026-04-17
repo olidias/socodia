@@ -11,6 +11,15 @@ export default function LanguagePicker({ url }) {
   }
   const lang = languages.find(l => l.key === getLangFromUrl(url));
 
+  const getLanguageHref = (langKey) => {
+    const pathname = typeof url === 'string' ? url : url.pathname;
+    const stripped = pathname.replace(/^\/(en|de)/, '');
+    if (!stripped || stripped === '/') {
+      return `/${langKey}`;
+    }
+    return langKey === 'en' ? stripped : `/${langKey}${stripped}`;
+  };
+
   const [isComponentVisible, setIsComponentVisible] = useState(true);
   const ref = useRef(null);
 
@@ -66,7 +75,7 @@ export default function LanguagePicker({ url }) {
             {languages.map((language, i) => (
               <a
                 key={i}
-                href={`/${language.key}`}
+                href={getLanguageHref(language.key)}
                 className="text-gray-700 px-4 py-2 text-sm flex justify-items-start hover:bg-gray-100"
                 role="menuitem"
                 tabIndex="-1"

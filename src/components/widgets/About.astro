@@ -39,7 +39,7 @@ const {
 ---
 
 <section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-slate-800 py-14 md:py-16 scroll-mt-12']} id="about">
-  <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+  <div class="max-w-4xl mx-auto">
     {
       (title || subtitle || highlight) && (
         <div class="mb-4 md:mx-auto text-center md:mb-6 max-w-3xl">
@@ -62,49 +62,43 @@ const {
       )
     }
   </div>
-  <div class="mx-auto max-w-7xl p-2 md:px-8">
-    <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
-      <div class="md:basis-1/2 self-center">
-        {content && <div class="mb-12 text-lg dark:text-slate-400 " set:html={content} />}
-        {
-          items && (
-            <div class="space-y-8">
-              {items.map(({ title: title2, description, details, icon }) => (
-                <div class="flex">
-                  <div class="flex-shrink-0">
-                    <div class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-gray-50">
-                      <Icon name={icon ? icon : 'tabler:check'} class="w-5 h-5" />
-                    </div>
-                  </div>
-                  <div class="ml-4">
-                    {title2 && <h3 class="text-lg font-medium leading-6 dark:text-white">{title2}</h3>}
-                    {description && <p class="mt-2 text-muted dark:text-slate-400" set:html={description} />}
-                    { // TODO: details &&
-                      <label for="readmore" >{t('shared.readmore')}</label>
-                      <input type="checkbox" id="readmore" 
-                      class="dark:text-slate-400 text-muted absolute w-full h-full cursor-pointer opacity-0
-                      checked:mt-0 checked:max-h-0 checked:translate-x-1/2" />
-                      <i class="after:translate-x-1 after:rotate-45 before:-rotate-45 before:-translate-x-1 bg-slate-400 w-2 h-4 mt-4 -translate-x-2 absolute content-none"></i>
-                    <div class="hidden">{details}</div>}
+  <div class="mx-auto max-w-7xl p-2 md:px-8 flex flex-col md:flex-row md:items-center md:justify-center gap-8">
+    <div class="md:basis-1/2 self-center">
+      {content && <div class="mb-6 text-lg dark:text-slate-400" set:html={content} />}
+      <a href={lang === 'de' ? '/de/projects' : '/projects'} class="inline-flex items-center gap-2 text-primary dark:text-blue-300 hover:underline font-medium mt-2">
+        {t('about.projectsLink')}
+        <Icon name="tabler:arrow-right" class="w-4 h-4" />
+      </a>
+      {
+        items && (
+          <div class="space-y-8 mt-8">
+            {items.map(({ title: title2, description, details, icon }) => (
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <div class="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-gray-50">
+                    <Icon name={icon ? icon : 'tabler:check'} class="w-5 h-5" />
                   </div>
                 </div>
-              ))}
-            </div>
-          )
-        }
-      </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
-            <div class="relative ">
-                <img 
-                  src={aboutData.aboutImage.img?.src}
-                  alt={aboutData.aboutImage.alt}
-                  class="mx-auto rounded-full bg-gray-500 shadow-xl bg-cover"
-                  width={250}
-                  height={250}
-                  alt="Oli Dias"
-                  sizes="(max-width: 768px) 100vw, 432px"
-                />
-            </div>
+                <div class="ml-4">
+                  {title2 && <h3 class="text-lg font-medium leading-6 dark:text-white">{title2}</h3>}
+                  {description && <p class="mt-2 text-muted dark:text-slate-400" set:html={description} />}
+                </div>
+              </div>
+            ))}
+          </div>
+        )
+      }
+    </div>
+    <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+      <div class="relative">
+        <img
+          src={aboutData.aboutImage.img?.src}
+          alt={aboutData.aboutImage.alt}
+          class="bg-gray-500 bg-cover shadow-xl mx-auto rounded-full"
+          width={250}
+          height={250}
+          sizes="(max-width: 768px) 100vw, 432px"
+        />
       </div>
     </div>
   </div>

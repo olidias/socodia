@@ -83,7 +83,7 @@ const t = useTranslations(lang);
 >
   <Fragment slot='content'>
     <h3
-      class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'
+      class='mb-2 font-bold dark:text-white text-2xl sm:text-3xl tracking-tight'
     >
     </h3>
   </Fragment>
@@ -144,7 +144,23 @@ const t = useTranslations(lang);
       techIcons: cmsToolsData.techIcons,
     },
   ]}
-/>
+>
+  <div slot="above-grid" class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800 dark:text-white">
+    <div class="flex items-center">
+      <img src="/techIcons/ai.png" alt="AI Augmented Delivery" class="w-10 h-10" />
+      <div class="ml-4 text-xl font-bold">{t('tools.ai')}</div>
+    </div>
+    <p class="text-muted dark:text-gray-400 text-md mt-4">{t('tools.ai.description')}</p>
+    <div class="mt-2 bg-transparent p-3 flex flex-wrap">
+      <div class="flex flex-col justify-center items-center grayscale hover:grayscale-0 transition-[filter] duration-250">
+        <a href="https://claude.ai/"><img src="/techIcons/claude.svg" alt="Claude AI by Anthropic" width="35" height="35" class="my-2 mx-3 max-h-9" /></a>
+      </div>
+      <div class="flex flex-col justify-center items-center grayscale hover:grayscale-0 transition-[filter] duration-250">
+        <a href="https://github.com/features/copilot"><img src="/techIcons/copilot.svg" alt="GitHub Copilot" width="35" height="35" class="my-2 mx-3 max-h-9" /></a>
+      </div>
+    </div>
+  </div>
+</Features2>
 
 <Testimonials title={t('reference.title')}
     highlight={t('reference.subtitle')}
@@ -156,6 +172,13 @@ const t = useTranslations(lang);
         url: testimonialsData[0].url,
         description: t('reference.testimonial.fmsa.description'),
         coverImage: testimonialsData[0].img
+      },
+      {
+        title: t('reference.testimonial.mentalk.title'),
+        author: testimonialsData[1].author,
+        url: testimonialsData[1].url,
+        description: t('reference.testimonial.mentalk.description'),
+        coverImage: testimonialsData[1].img
       }
     ]}
 />
