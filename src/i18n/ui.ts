@@ -90,9 +90,9 @@ export const ui = {
     'reference.testimonial.fsma.subtitle': 'Fitter. Stronger. More Athletic.',
     'reference.testimonial.fmsa.description': 'Oli\'s work was fast, efficient, and personal. He took my individual wishes into account, brought in his own ideas and designed the website even better than I envisioned. I am very satisfied with the result and can definitely recommend him to others.',
 
-    'reference.testimonial.bellini.title': 'Marco Bellini',
-    'reference.testimonial.bellini.subtitle': 'Project Lead, Financial Services',
-    'reference.testimonial.bellini.description': 'Working with Oli on a complex enterprise application was a great experience. He brings both deep technical expertise and an understanding of business requirements that is rare to find. Reliable, communicative, and always delivering high-quality results.',
+    'reference.testimonial.mentalk.title': 'Cameron McNiff',
+    'reference.testimonial.mentalk.subtitle': 'President, MenTalk',
+    'reference.testimonial.mentalk.description': 'Oli showed a great deal of initiative during the implementation of our website and took full responsibility for delivering a solid and appealing solution. It was a pleasure working with him and I can recommend anyone to benefit from Oli\'s high-quality work.',
 
     'about.title': 'Who am I?',
     'about.subtitle': 'subtitle',
@@ -220,9 +220,9 @@ export const ui = {
     'reference.testimonial.fsma.subtitle': 'Fitter. Stronger. More Athletic.',
     'reference.testimonial.fmsa.description': 'Olis Arbeit war schnell, effizient und persönlich. Er ging auf meine individuellen Wünsche ein, brachte eigene Ideen ein und gestaltete die Website noch besser, als ich es mir vorgestellt hatte. Ich bin mit dem Ergebnis sehr zufrieden und kann ihn auf jeden Fall weiterempfehlen.',
 
-    'reference.testimonial.bellini.title': 'Marco Bellini',
-    'reference.testimonial.bellini.subtitle': 'Projektleiter, Finanzdienstleistungen',
-    'reference.testimonial.bellini.description': 'Die Zusammenarbeit mit Oli an einer komplexen Unternehmensanwendung war eine tolle Erfahrung. Er bringt sowohl tiefes technisches Fachwissen als auch ein Verständnis für geschäftliche Anforderungen mit, das man selten findet. Zuverlässig, kommunikativ und stets mit qualitativ hochwertigen Ergebnissen.',
+    'reference.testimonial.mentalk.title': 'Cameron McNiff',
+    'reference.testimonial.mentalk.subtitle': 'Vereinspräsident, MenTalk',
+    'reference.testimonial.mentalk.description': 'Oli zeigte während der Umsetzung der Website sehr viel Eigeninitative und übernahm die komplette Verantwortung dafür, dass eine solide und ansprechende Lösung umgesetzt wurde. Es war mir ein Vergnügen mit ihm zusammenzuarbeiten und kann jedem empfehlen, von Oli\'s qualitativ hochwertiger Arbeit provitieren zu können.',
 
     'about.title': 'Wer bin ich?',
     'about.subtitle': 'subtitle',

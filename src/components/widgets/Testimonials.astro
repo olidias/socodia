@@ -18,57 +18,57 @@ const { title, highlight, testimonials = [] } = Astro.props;
 
 <section id="references" class="-mt-40 mb-16">
   <div
-    class="bg-blue-50 dark:bg-slate-800 pointer-events-none mb-32"
+    class="bg-blue-50 dark:bg-slate-800 mb-32 pointer-events-none"
     aria-hidden="true"
   >
   </div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+  <div class="relative mx-auto px-4 sm:px-6 max-w-7xl">
+    <div class="py-4 sm:py-6 lg:py-8 pt-8 lg:pt-12">
       {
         (title || highlight) && (
-          <div class="mb-8 md:mx-auto text-center max-w-3xl">
+          <div class="md:mx-auto mb-8 max-w-3xl text-center">
             {highlight && (
               <p
-                class="text-base text-primaryLight dark:text-blue-200 font-semibold tracking-wide uppercase mb-2"
+                class="mb-2 font-semibold text-primaryLight dark:text-blue-200 text-base uppercase tracking-wide"
                 set:html={highlight}
               />
             )}
             {title && (
               <h2
-                class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                class="mb-4 font-heading font-bold text-4xl md:text-5xl leading-tighter tracking-tighter"
                 set:html={title}
               />
             )}
           </div>
         )
       }
-      <div class="dark:text-white mx-auto max-w-2xl">
+      <div class="mx-auto max-w-2xl dark:text-white">
         <div class="relative w-full" id="testimonial-carousel">
           <!-- Slides container -->
-          <div class="overflow-hidden pt-[4rem] sm:pt-[6rem]">
+          <div class="pt-[4rem] sm:pt-[6rem] overflow-hidden">
             <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-track">
               {
                 testimonials.map(
                   ({ author, description, url, coverImage }, i) => (
                     <div
-                      class="w-full flex-shrink-0 flex flex-col justify-center pb-5 px-2"
+                      class="flex flex-col flex-shrink-0 justify-center px-2 pb-5 w-full"
                       data-testimonial-slide
                     >
-                      <div class="flex flex-col p-10 items-center bg-blue-50 dark:bg-slate-800 rounded-xl mx-auto shadow-lg hover:shadow-md w-full max-w-lg">
+                      <div class="flex flex-col items-center bg-blue-50 dark:bg-slate-800 shadow-lg hover:shadow-md mx-auto p-10 rounded-xl w-full max-w-xl">
                         <img
                           src={coverImage.src}
                           alt={coverImage.alt}
-                          class="sm:w-[150px] sm:h-[150px] rounded-full sm:mt-[-125px] w-[100px] h-[100px] mt-[-90px] dark:border-slate-600 border-slate-300 border-2 object-cover"
+                          class="mt-[-90px] sm:mt-[-125px] border-2 border-slate-300 dark:border-slate-600 rounded-full w-[100px] sm:w-[150px] h-[100px] sm:h-[150px] object-cover"
                         />
-                        <p class="text-lg italic font-serif my-5 text-center dark:text-slate-200">
+                        <p class="my-5 dark:text-slate-200 text-lg text-center italic">
                           <span class="text-lg">&ldquo;</span>
                           {description}
                           <span class="text-lg">&rdquo;</span>
                         </p>
-                        <span class="mr-2 opacity-75">-</span>
+                        <span class="opacity-75 mr-2">-</span>
                         {author}
                         {url && (
-                          <a href={url} class="italic opacity-50 mt-1 text-sm hover:opacity-75 transition-opacity">
+                          <a href={url} class="opacity-50 hover:opacity-75 mt-1 text-sm italic transition-opacity">
                             {url}
                           </a>
                         )}
@@ -85,11 +85,11 @@ const { title, highlight, testimonials = [] } = Astro.props;
             <button
               type="button"
               id="testimonial-prev"
-              class="absolute top-1/2 -translate-y-1/2 left-0 sm:-left-4 z-30 flex items-center justify-center cursor-pointer group focus:outline-none"
+              class="group top-1/2 left-0 sm:-left-4 z-30 absolute flex justify-center items-center focus:outline-none -translate-y-1/2 cursor-pointer"
               aria-label="Previous testimonial"
             >
               <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-200/70 dark:bg-gray-700/50 group-hover:bg-gray-300/80 dark:group-hover:bg-gray-600/70 transition-colors duration-200 shadow-sm"
+                class="inline-flex justify-center items-center bg-gray-200/70 dark:bg-gray-700/50 dark:group-hover:bg-gray-600/70 group-hover:bg-gray-300/80 shadow-sm rounded-full w-10 h-10 transition-colors duration-200"
               >
                 <svg
                   class="w-4 h-4 text-gray-600 dark:text-gray-300"
@@ -110,11 +110,11 @@ const { title, highlight, testimonials = [] } = Astro.props;
             <button
               type="button"
               id="testimonial-next"
-              class="absolute top-1/2 -translate-y-1/2 right-0 sm:-right-4 z-30 flex items-center justify-center cursor-pointer group focus:outline-none"
+              class="group top-1/2 right-0 sm:-right-4 z-30 absolute flex justify-center items-center focus:outline-none -translate-y-1/2 cursor-pointer"
               aria-label="Next testimonial"
             >
               <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-200/70 dark:bg-gray-700/50 group-hover:bg-gray-300/80 dark:group-hover:bg-gray-600/70 transition-colors duration-200 shadow-sm"
+                class="inline-flex justify-center items-center bg-gray-200/70 dark:bg-gray-700/50 dark:group-hover:bg-gray-600/70 group-hover:bg-gray-300/80 shadow-sm rounded-full w-10 h-10 transition-colors duration-200"
               >
                 <svg
                   class="w-4 h-4 text-gray-600 dark:text-gray-300"

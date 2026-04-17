@@ -15,7 +15,7 @@ import oli from '../../public/about/oli.webp';
 import fsma from '../../public/testimonials/fsma.webp';
 import testimonialPlaceholder from '../../public/testimonials/placeholder.svg';
 import wix from '../../public/techIcons/wix.svg';
-
+import mentalk from '../../public/testimonials/mentalk.png';
 
 export const frontendToolsData = {
   techIcons: [
@@ -104,10 +104,10 @@ export const testimonialsData = [
     description: 'Here is the description'
   },
   {
-    img: testimonialPlaceholder,
-    alt: 'Marco Bellini',
-    author: 'Marco Bellini',
-    url: '',
+    img: mentalk,
+    alt: 'Cameron McNiff',
+    author: 'Cameron McNiff',
+    url: 'https://mentalk.ch',
     title: '',
     subtitle: '',
     description: 'Here is the description'
