@@ -1,3 +1,3 @@
 # Socodia.com
 
-Based on Astro and AstroWind template.
+Based on Astro and AstroWind template. 
