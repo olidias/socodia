@@ -25,19 +25,19 @@ export const ui = {
     'hero.title': '',
     'hero.subtitle': 'Solid Software. Competent Consulting.',
 
-    'entry.teaser': 'From concept to production — fullstack development and consulting with senior-level ownership.',
+    'entry.teaser': 'From concept to production - fullstack development and consulting with senior-level ownership.',
 
     'entry.item-fully-customized.title': 'Fully Customized Solutions',
     'entry.item-fully-customized.description': 'Using modern technologies and creative approaches, I personally architect and build applications tailored to your vision.',
 
     'entry.item-customer-centricity.title': 'Direct Collaboration',
-    'entry.item-customer-centricity.description': 'No middlemen, no relay — the person you talk to is the person writing the code. I guide you through the entire process.',
+    'entry.item-customer-centricity.description': 'No middlemen, no relay - the person you talk to is the person writing the code. I guide you through the entire process.',
 
     'entry.item-usability.title': 'Usability Focus',
     'entry.item-usability.description': 'I place special value on usability. Through responsive and engaging applications, I create experiences that appeal to a wide range of users.',
 
     'entry.item-quality.title': 'Quality',
-    'entry.item-quality.description': 'Thorough testing, CI/CD pipelines, and code reviews are part of every project. I strive for only the highest quality.',
+    'entry.item-quality.description': 'Thorough testing, CI/CD pipelines, and code reviews are part of every project. Let\'s talk about your quality requirements.',
 
     'use-cases.title': 'Use Cases',
     'use-cases.subtitle': 'Here to help.',
@@ -47,10 +47,10 @@ export const ui = {
     'use-cases.case1.description': 'Need a fullstack developer who can integrate into your team and deliver on complex, business-critical software? I bring years of experience in banking, government, and cross-industry projects.',
 
     'use-cases.case2.title': 'Leadership',
-    'use-cases.case2.description': 'Looking for someone who can lead a sub-project, onboard juniors, or facilitate team processes? I\'ve managed teams of 7 and led initiatives within large organizations.',
+    'use-cases.case2.description': 'Looking for someone who can lead a project, onboard new joiners, or facilitate team processes? I\'ve managed teams of up to 13 and led initiatives within large organizations.',
 
     'use-cases.case3.title': 'Web Development & Digital Presence',
-    'use-cases.case3.description': 'From corporate websites to custom web applications — I deliver modern, performant solutions using React, Astro, and headless CMS platforms.',
+    'use-cases.case3.description': 'From corporate websites to custom web applications - I deliver modern, performant solutions using React, Astro, and headless CMS platforms.',
 
 
     'procedure.title': 'Procedure',
@@ -83,7 +83,7 @@ export const ui = {
     'tools.cms.description': 'There are a number of ways to integrate various CMS into the solutions.',
 
     'tools.ai': 'AI Augmented Delivery',
-    'tools.ai.description': 'Leveraging AI-powered tools to accelerate development, improve code quality, and deliver faster.',
+    'tools.ai.description': 'Leveraging AI-powered tools to accelerate development, improve code quality, and deliver faster without AI slop.',
 
     'reference.title': 'Testimonials',
     'reference.subtitle': 'References',
@@ -100,7 +100,7 @@ export const ui = {
     'about.title': 'Who am I?',
     'about.subtitle': 'subtitle',
     'about.highlight': 'About',
-    'about.content': 'With over 8 years of professional experience in software development across industries like banking, government, and digital services, I bring a rare combination of technical depth and leadership ability.<br /><br />As a line manager, I led a team of 7 developers — conducting appraisals, facilitating salary conversations, resolving conflicts, and ensuring knowledge flow through regular team meetings. On the technical side, I\'ve delivered fullstack solutions in teams ranging from 2 to 11 people, always with a focus on quality, testing, and clean architecture.<br /><br />Since earning my bachelor\'s degree in computer science from university OST in 2019, I\'ve worked at a software consulting company while building my own freelance practice since 2023 — offering everything from enterprise application development to modern websites.',
+    'about.content': 'With over 10 years of professional experience in software development across industries like banking, government, and digital services, I bring a combination of technical depth and leadership ability.<br /><br />As a line manager, I led a team of 13 developers - conducting appraisals, facilitating salary conversations, resolving conflicts, and ensuring knowledge flow through regular team meetings. On the technical side, I\'ve delivered fullstack solutions in teams ranging from 2 to 11 people, always with a focus on quality, testing, and clean architecture.<br /><br />Since earning my bachelor\'s degree in computer science from university OST in 2019, I\'ve worked at a software consulting company while building my own freelance practice since 2023 - offering everything from enterprise application development to modern websites.',
 
     'projects.webapp_roads.highlight1': 'Drove and maintained the project as part of a two-person team with full ownership',
     'projects.webapp_roads.highlight2': 'Fullstack development with .NET, Web Forms, React, Oracle, ArcGIS, and Selenium',
@@ -120,7 +120,7 @@ export const ui = {
     'projects.webprojects.highlight2': 'Experience with modern web frameworks and headless CMS platforms',
     'projects.webprojects.highlight3': 'Adapted solutions to client needs, from simple sites to complex integrations',
 
-    'projects.archreview.title': 'Architecture Review — ERP-to-DWH Integration',
+    'projects.archreview.title': 'Architecture Review - ERP-to-DWH Integration',
     'projects.archreview.period': '2023',
     'projects.archreview.role': 'Software Architect',
     'projects.archreview.tech': 'Python, ETL, Data Warehousing',
@@ -139,8 +139,8 @@ export const ui = {
     'shared.readmore': 'Read more',
 
     'projects.title': 'Projects & References',
-    'projects.intro': 'A selection of projects showcasing my expertise in fullstack software development, technical leadership, and web development. I deliver robust solutions for business-critical applications — with ownership, modern technologies, and a customer-focused approach.',
-    'projects.leadership': 'As a line manager, I led a team of 7 developers — conducting appraisals, facilitating salary conversations, resolving conflicts, and ensuring knowledge flow through regular team meetings.',
+    'projects.intro': 'A selection of projects showcasing my expertise in fullstack software development, technical leadership, and web development. I deliver robust solutions for business-critical applications - with ownership, modern technologies, and a customer-focused approach.',
+    'projects.leadership': 'As a line manager, I led a team of 13 developers - conducting appraisals, facilitating salary conversations, resolving conflicts, and ensuring knowledge flow through regular team meetings.',
     'projects.cta': 'Looking for a reliable partner for your next software project or digital transformation?',
     'projects.ctaButton': 'Get in touch',
     'projects.webapp_roads.title': 'Road Construction Planning & Road Condition Application',
@@ -167,19 +167,19 @@ export const ui = {
     'header.about': 'Über mich',
     'header.contact': 'Kontakt',
 
-    'entry.teaser': 'Vom Konzept bis zur Produktion — Fullstack-Entwicklung und Beratung mit Senior-Level Verantwortung.',
+    'entry.teaser': 'Vom Konzept bis zur Produktion - Fullstack-Entwicklung und Beratung mit Senior-Level Verantwortung.',
 
-    'entry.item-fully-customized.title': 'Komplett massgeschneiderte Lösungen',
-    'entry.item-fully-customized.description': 'Durch moderne Technologien und kreative Ansätze entwerfe und entwickle ich persönlich Applikationen gemäss Deiner Vorstellung.',
+    'entry.item-fully-customized.title': 'Massgeschneiderte Lösungen',
+    'entry.item-fully-customized.description': 'Durch moderne Technologien und Vorgehensweisen entwerfe und entwickle ich persönlich Applikationen gemäss Deiner Vorstellung.',
 
     'entry.item-customer-centricity.title': 'Direkte Zusammenarbeit',
-    'entry.item-customer-centricity.description': 'Kein Mittelsmann, kein Umweg — die Person, mit der Du sprichst, schreibt auch den Code. Ich begleite Dich durch den gesamten Prozess.',
+    'entry.item-customer-centricity.description': 'Kein Mittelsmann, kein Umweg - die Person, mit der Du sprichst, schreibt auch den Code. Ich begleite Dich durch den gesamten Prozess.',
 
     'entry.item-usability.title': 'Usability Fokus',
-    'entry.item-usability.description': 'Ich lege besonderen Wert auf Usability. Durch responsive und ansprechende Applikationen entstehen Erlebnisse, die für eine Vielzahl von Benutzern funktionieren.',
+    'entry.item-usability.description': 'Auf Usability wird besonderer Wert gelegt. Durch responsive und ansprechende Applikationen entstehen Erlebnisse, von denen die Benutzer begeistert sind.',
 
     'entry.item-quality.title': 'Qualität',
-    'entry.item-quality.description': 'Gründliches Testing, CI/CD-Pipelines und Code Reviews sind Teil jedes Projekts. Ich strebe nur höchste Qualität an.',
+    'entry.item-quality.description': 'Gründliches Testing, CI/CD-Pipelines und Code Reviews sind Teil jedes Projekts. Lass uns über die Qualitätsmerkmale deiner Applikation sprechen.',
 
 
     'use-cases.title': 'Anwendungsfälle',
@@ -189,10 +189,10 @@ export const ui = {
     'use-cases.case1.description': 'Du brauchst einen Fullstack-Entwickler, der sich nahtlos in Dein Team integriert und komplexe, geschäftskritische Software liefert? Ich bringe jahrelange Erfahrung in den Bereichen Bankwesen, öffentliche Verwaltung und branchenübergreifenden Projekten mit.',
 
     'use-cases.case2.title': 'Leadership',
-    'use-cases.case2.description': 'Auf der Suche nach jemandem, der ein Teilprojekt leiten, Juniors einarbeiten oder Teamprozesse moderieren kann? Ich habe Teams von 7 Personen geführt und Initiativen in grossen Organisationen vorangetrieben.',
+    'use-cases.case2.description': 'Auf der Suche nach jemandem, der ein Projekt leiten, neue Teammitglieder einarbeiten oder Teamprozesse moderieren kann? Ich habe Teams bis zu 13 Personen geführt und Initiativen in grossen Organisationen vorangetrieben.',
 
     'use-cases.case3.title': 'Webentwicklung & digitale Präsenz',
-    'use-cases.case3.description': 'Von Unternehmenswebsites bis zu massgeschneiderten Webapplikationen — ich liefere moderne, performante Lösungen mit React, Astro und Headless-CMS-Plattformen.',
+    'use-cases.case3.description': 'Von Unternehmenswebsites bis zu massgeschneiderten Webapplikationen - ich liefere moderne, performante Lösungen mit React, Astro und Headless-CMS-Plattformen.',
 
 
     'procedure.title': 'Vorgehen',
@@ -216,7 +216,7 @@ export const ui = {
     'tools.highlight': 'Ein kurzer Überblick auf den bevorzugten Technologie Stack.',
 
     'tools.frontend': 'Frontend',
-    'tools.frontend.description': 'Folgende Technologien stehen für das Darstellen der Websites im Einsatz:',
+    'tools.frontend.description': 'Folgende Technologien stehen im Frontendbereich im Einsatz:',
 
     'tools.backend': 'Backend / Datenbanken',
     'tools.backend.description': 'Für komplexere Logik und für die Persistierung von Daten mache ich von den aufgelisteten Tools Gebrauch.',
@@ -225,7 +225,7 @@ export const ui = {
     'tools.cms.description': 'Verschiedenste Möglichkeiten zur Integration von allerlei Content Management Systemen sind vorhanden.',
 
     'tools.ai': 'AI Augmented Delivery',
-    'tools.ai.description': 'Einsatz von KI-gestützten Tools zur Beschleunigung der Entwicklung, Verbesserung der Codequalität und schnellerer Auslieferung.',
+    'tools.ai.description': 'Einsatz von KI-gestützten Tools zur Beschleunigung der Entwicklung, Verbesserung der Codequalität und schnellerer Auslieferung ohne KI-Slop.',
 
     'reference.title': 'Das sagen die Kunden',
     'reference.subtitle': 'Referenzen',
@@ -242,7 +242,7 @@ export const ui = {
     'about.title': 'Wer bin ich?',
     'about.subtitle': 'subtitle',
     'about.highlight': 'Über mich',
-    'about.content': 'Mit über 8 Jahren Berufserfahrung in der Softwareentwicklung in Branchen wie Bankwesen, öffentliche Verwaltung und digitale Dienstleistungen bringe ich eine seltene Kombination aus technischer Tiefe und Führungskompetenz mit.<br /><br />Als Linienvorgesetzter habe ich ein Team von 7 Entwicklern geführt — Mitarbeitergespräche und Lohnverhandlungen durchgeführt, bei Konflikten unterstützt und durch regelmässige Teammeetings den Informationsfluss sichergestellt. Auf der technischen Seite habe ich Fullstack-Lösungen in Teams von 2 bis 11 Personen geliefert, stets mit Fokus auf Qualität, Testing und saubere Architektur.<br /><br />Seit meinem Bachelorabschluss in Informatik an der Fachhochschule OST im Jahr 2019 arbeite ich bei einem Software-Consulting-Unternehmen und baue seit 2023 meine eigene Freelance-Tätigkeit auf — von Enterprise-Applikationen bis hin zu modernen Websites.',
+    'about.content': 'Mit über 10 Jahren Berufserfahrung in der Softwareentwicklung in Branchen wie Bankwesen, öffentliche Verwaltung und digitale Dienstleistungen bringe ich eine Kombination aus technischer Tiefe und Führungskompetenz mit.<br /><br />Als Linienvorgesetzter habe ich ein Team von 13 Entwicklern geführt - Mitarbeitergespräche und Lohnverhandlungen durchgeführt, Konflikte gelöst und durch regelmässige Teammeetings den Informationsfluss sichergestellt. Auf der technischen Seite habe ich Fullstack-Lösungen in Teams von 2 bis 11 Personen geliefert, stets mit Fokus auf Qualität, Testing und saubere Architektur.<br /><br />Seit meinem Bachelorabschluss in Informatik an der Fachhochschule OST im Jahr 2019 arbeite ich bei einem Software-Consulting-Unternehmen und baue seit 2023 meine eigene Freelance-Tätigkeit auf - von Enterprise-Applikationen bis hin zu modernen Websites.',
 
     'about.projectsLink': 'Ausgewählte Projekte und Referenzen ansehen',
 
@@ -254,8 +254,8 @@ export const ui = {
     'shared.readmore': 'Mehr',
 
     'projects.title': 'Projekte & Referenzen',
-    'projects.intro': 'Eine Auswahl an Projekten, die meine Erfahrung in der Fullstack-Softwareentwicklung, technischen Führung und Webentwicklung zeigen. Ich liefere robuste Lösungen für geschäftskritische Anwendungen — mit Verantwortungsbewusstsein, modernen Technologien und kundenorientiertem Ansatz.',
-    'projects.leadership': 'Als Linienvorgesetzter habe ich ein Team von 7 Entwicklern geführt — Mitarbeitergespräche und Lohnverhandlungen durchgeführt, bei Konflikten unterstützt und durch regelmässige Teammeetings den Informationsfluss sichergestellt.',
+    'projects.intro': 'Eine Auswahl an Projekten, die meine Erfahrung in der Fullstack-Softwareentwicklung, technischen Führung und Webentwicklung zeigen. Ich liefere robuste Lösungen für geschäftskritische Anwendungen - mit Verantwortungsbewusstsein, modernen Technologien und kundenorientiertem Ansatz.',
+    'projects.leadership': 'Als Linienvorgesetzter habe ich ein Team von 13 Entwicklern geführt - Mitarbeitergespräche und Lohnverhandlungen durchgeführt, Konflikte gelöst und durch regelmässige Teammeetings den Informationsfluss sichergestellt.',
     'projects.cta': 'Auf der Suche nach einem zuverlässigen Partner für Ihr nächstes Softwareprojekt oder Ihre digitale Transformation?',
     'projects.ctaButton': 'Kontakt aufnehmen',
     'projects.webapp_roads.title': 'Strassenbauplanung & Strassenzustandsanwendung',
@@ -290,9 +290,9 @@ export const ui = {
     'projects.webprojects.tech': 'Astro, Wix, DatoCMS, Storyblok, React, TypeScript',
     'projects.webprojects.highlight1': 'Umsetzung individueller Websites und Weblösungen für verschiedene Kunden',
     'projects.webprojects.highlight2': 'Erfahrung mit modernen Web-Frameworks und Headless-CMS-Plattformen',
-    'projects.webprojects.highlight3': 'Anpassung der Lösungen an die jeweiligen Kundenanforderungen — von einfachen Seiten bis zu komplexen Integrationen',
+    'projects.webprojects.highlight3': 'Anpassung der Lösungen an die jeweiligen Kundenanforderungen - von einfachen Seiten bis zu komplexen Integrationen',
 
-    'projects.archreview.title': 'Architektur-Review — ERP-zu-DWH-Integration',
+    'projects.archreview.title': 'Architektur-Review - ERP-zu-DWH-Integration',
     'projects.archreview.period': '2023',
     'projects.archreview.role': 'Software Architekt',
     'projects.archreview.tech': 'Python, ETL, Data Warehousing',
