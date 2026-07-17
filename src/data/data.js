@@ -54,6 +54,7 @@ export const backendToolsData = {
   techIcons: [
     {
       img: csharp,
+      darkOptionImg: csharp,
       alt: 'C# Programming Language',
       url: 'https://dotnet.microsoft.com/en-us/languages/csharp'
     },
