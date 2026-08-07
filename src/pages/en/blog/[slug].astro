@@ -1,0 +1,15 @@
+---
+import { getBlogPosts, getBlogPostPath } from '~/utils/blogPosts';
+
+export async function getStaticPaths() {
+  const posts = await getBlogPosts('en');
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { target: getBlogPostPath(post.slug, 'en') },
+  }));
+}
+
+const { target } = Astro.props;
+---
+<meta http-equiv="refresh" content={`0;url=${target}`} />

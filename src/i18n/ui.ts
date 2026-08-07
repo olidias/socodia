@@ -20,6 +20,7 @@ export const ui = {
     'header.procedure': 'Procedure',
     'header.tools': 'Tools & Tech',
     'header.about': 'About',
+    'header.blog': 'Blog',
     'header.contact': 'Contact',
 
     'hero.title': '',
@@ -138,6 +139,13 @@ export const ui = {
 
     'shared.readmore': 'Read more',
 
+    'blog.eyebrow': 'Insights',
+    'blog.title': 'Blog',
+    'blog.intro': 'Notes on software engineering, delivery and consulting - practical takeaways from building business-critical applications.',
+    'blog.empty': 'No posts published yet. Check back soon.',
+    'blog.backToOverview': 'All posts',
+    'blog.readingTime': 'min read',
+
     'projects.title': 'Projects & References',
     'projects.intro': 'A selection of projects showcasing my expertise in fullstack software development, technical leadership, and web development. I deliver robust solutions for business-critical applications - with ownership, modern technologies, and a customer-focused approach.',
     'projects.leadership': 'As a line manager, I led a team of 13 developers - conducting appraisals, facilitating salary conversations, resolving conflicts, and ensuring knowledge flow through regular team meetings.',
@@ -165,6 +173,7 @@ export const ui = {
     'header.procedure': 'Vorgehen',
     'header.tools': 'Tools & Tech',
     'header.about': 'Über mich',
+    'header.blog': 'Blog',
     'header.contact': 'Kontakt',
 
     'entry.teaser': 'Vom Konzept bis zur Produktion - Fullstack-Entwicklung und Beratung mit Senior-Level Verantwortung.',
@@ -252,6 +261,13 @@ export const ui = {
     'contact.confirmationText': 'Ich werde mich so schnell wie möglich bei Dir melden.',
 
     'shared.readmore': 'Mehr',
+
+    'blog.eyebrow': 'Einblicke',
+    'blog.title': 'Blog',
+    'blog.intro': 'Notizen zu Softwareentwicklung, Delivery und Beratung - praxisnahe Erkenntnisse aus der Arbeit an geschäftskritischen Applikationen.',
+    'blog.empty': 'Noch keine Beiträge veröffentlicht. Schau bald wieder vorbei.',
+    'blog.backToOverview': 'Alle Beiträge',
+    'blog.readingTime': 'Min. Lesezeit',
 
     'projects.title': 'Projekte & Referenzen',
     'projects.intro': 'Eine Auswahl an Projekten, die meine Erfahrung in der Fullstack-Softwareentwicklung, technischen Führung und Webentwicklung zeigen. Ich liefere robuste Lösungen für geschäftskritische Anwendungen - mit Verantwortungsbewusstsein, modernen Technologien und kundenorientiertem Ansatz.',

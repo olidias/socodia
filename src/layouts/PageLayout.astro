@@ -9,14 +9,16 @@ import type { MetaSEO } from '~/types';
 export interface Props {
   meta?: MetaSEO;
   showNavigation?: boolean;
+  /** Restricts the language picker, e.g. to the languages an article has been translated into. */
+  availableLangs?: Array<string>;
 }
 
-const { meta, showNavigation } = Astro.props;
+const { meta, showNavigation, availableLangs } = Astro.props;
 ---
 
 <Layout {meta}>
   <slot name="header">
-    <Header isSticky showToggleTheme showNavigation={showNavigation ?? true} />
+    <Header isSticky showToggleTheme showNavigation={showNavigation ?? true} availableLangs={availableLangs} />
   </slot>
   <main>
     <slot />

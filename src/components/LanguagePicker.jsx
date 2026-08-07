@@ -3,13 +3,19 @@ import { Icon } from "@iconify/react";
 import { getLangFromUrl } from "~/i18n/utils";
 import { useState, useEffect, useRef } from "react";
 
-export default function LanguagePicker({ url }) {
+export default function LanguagePicker({ url, availableLangs }) {
   const [menuOpen, setMenuOpen] = useState(false);
   function toggleMenu() {
     setIsComponentVisible(true);
     setMenuOpen(!menuOpen);
   }
   const lang = languages.find(l => l.key === getLangFromUrl(url));
+
+  // Pages that only exist in a subset of languages (e.g. a partially translated
+  // blog post) pass availableLangs so we never link to a page that does not exist.
+  const selectableLanguages = availableLangs?.length
+    ? languages.filter(l => availableLangs.includes(l.key))
+    : languages;
 
   const getLanguageHref = (langKey) => {
     const pathname = typeof url === 'string' ? url : url.pathname;
@@ -72,7 +78,7 @@ export default function LanguagePicker({ url }) {
           tabIndex="-1"
         >
           <div className="py-1 flex-row" role="none">
-            {languages.map((language, i) => (
+            {selectableLanguages.map((language, i) => (
               <a
                 key={i}
                 href={getLanguageHref(language.key)}

@@ -1,0 +1,22 @@
+---
+import BlogPostLayout from '~/layouts/BlogPostLayout.astro';
+import { getBlogPosts, getPostLanguages } from '~/utils/blogPosts';
+
+export async function getStaticPaths() {
+  const posts = await getBlogPosts('de');
+
+  return await Promise.all(
+    posts.map(async (post) => ({
+      params: { slug: post.slug },
+      props: { post, availableLangs: await getPostLanguages(post.slug) },
+    }))
+  );
+}
+
+const { post, availableLangs } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await post.entry.render();
+---
+
+<BlogPostLayout {post} {availableLangs} readingTime={remarkPluginFrontmatter?.readingTime}>
+  <Content />
+</BlogPostLayout>
