@@ -18,6 +18,24 @@ const post = defineCollection({
   }),
 });
 
+// One folder per article, one markdown file per language:
+//   src/content/blog/<slug>/en.md
+//   src/content/blog/<slug>/de.md
+// The folder name becomes the URL slug in every language.
+const blog = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    publishDate: z.coerce.date(),
+    excerpt: z.string(),
+    // Absolute path into /public, e.g. /blog/my-post/cover.webp
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    draft: z.boolean().optional().default(false),
+  }),
+});
+
 export const collections = {
   post: post,
+  blog: blog,
 };

@@ -1,0 +1,87 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { useTranslations } from '~/i18n/utils';
+import { formatPostDate, getBlogListPath } from '~/utils/blogPosts';
+import type { BlogLang, BlogPost } from '~/utils/blogPosts';
+import type { MetaSEO } from '~/types';
+
+export interface Props {
+  post: BlogPost;
+  readingTime?: number;
+  availableLangs?: Array<BlogLang>;
+}
+
+const { post, readingTime, availableLangs } = Astro.props;
+const t = useTranslations(post.lang);
+
+const meta: MetaSEO = {
+  title: post.title,
+  description: post.excerpt,
+  language: post.lang,
+  ogType: 'article',
+};
+---
+
+<PageLayout {meta} {availableLangs}>
+  <article>
+    <!-- Hero Section -->
+    <section
+      class="relative bg-gradient-to-b from-blue-50 dark:from-slate-800 to-white dark:to-slate-900 pt-20 pb-12 overflow-hidden"
+    >
+      <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"></div>
+      <div class="relative mx-auto px-4 sm:px-6 max-w-3xl">
+        <a
+          href={getBlogListPath(post.lang)}
+          class="inline-flex items-center gap-1.5 mb-6 font-semibold text-primaryLight dark:text-blue-200 text-sm hover:underline"
+        >
+          <span aria-hidden="true">&larr;</span>
+          {t('blog.backToOverview')}
+        </a>
+        <h1
+          class="mb-4 font-heading font-bold text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tighter"
+        >
+          {post.title}
+        </h1>
+        <p class="mb-4 text-muted dark:text-slate-400 text-lg leading-relaxed">{post.excerpt}</p>
+        <p class="flex flex-wrap items-center gap-x-2 text-muted dark:text-slate-400 text-sm">
+          <time datetime={post.publishDate.toISOString()}>{formatPostDate(post.publishDate, post.lang)}</time>
+          {
+            readingTime ? (
+              <>
+                <span aria-hidden="true">&middot;</span>
+                <span>
+                  {readingTime} {' ' + t('blog.readingTime')}
+                </span>
+              </>
+            ) : null
+          }
+        </p>
+      </div>
+    </section>
+
+    {
+      post.image && (
+        <div class="mx-auto px-4 sm:px-6 max-w-4xl">
+          <img
+            src={post.image}
+            alt={post.imageAlt ?? ''}
+            width="1200"
+            height="675"
+            loading="eager"
+            decoding="async"
+            class="shadow-lg rounded-xl w-full object-cover aspect-[16/9]"
+          />
+        </div>
+      )
+    }
+
+    <!-- Article Body -->
+    <section class="mx-auto px-4 sm:px-6 pt-10 pb-20 max-w-3xl">
+      <div
+        class="prose-img:shadow-lg dark:prose-invert prose-img:rounded-md max-w-none prose-headings:font-heading prose-headings:font-bold dark:prose-a:text-blue-400 dark:prose-headings:text-slate-300 prose-a:text-primary prose-headings:leading-tighter prose-headings:tracking-tighter prose prose-lg"
+      >
+        <slot />
+      </div>
+    </section>
+  </article>
+</PageLayout>

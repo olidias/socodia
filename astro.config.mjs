@@ -30,12 +30,13 @@ export default defineConfig({
       applyBaseStyles: false
     }}),
     sitemap({
-      filter: (page) => 
-        page !== 'https://socodia.com/en/contact-complete' && 
+      // /en/* pages are redirect stubs to the prefix-less English pages, never index them.
+      filter: (page) =>
+        !/\/en(\/|$)/.test(page) &&
         page !== 'https://socodia.com/de/contact-complete',
       lastmod: new Date()
     }
-    ), 
+    ),
     mdx(), 
     ...whenExternalScripts(() => partytown({
       config: {

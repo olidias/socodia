@@ -1,0 +1,50 @@
+---
+import type { BlogPost } from '~/utils/blogPosts';
+import { formatPostDate, getBlogPostPath } from '~/utils/blogPosts';
+
+export interface Props {
+  post: BlogPost;
+  readMoreLabel: string;
+}
+
+const { post, readMoreLabel } = Astro.props;
+const href = getBlogPostPath(post.slug, post.lang);
+---
+
+<article
+  class="group flex flex-col bg-white dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700/50 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/20 dark:hover:border-blue-400/20 hover:-translate-y-1"
+>
+  {
+    post.image && (
+      <a href={href} class="block bg-gray-100 dark:bg-slate-700 aspect-[16/9] overflow-hidden" tabindex="-1" aria-hidden="true">
+        <img
+          src={post.image}
+          alt={post.imageAlt ?? ''}
+          width="800"
+          height="450"
+          loading="lazy"
+          decoding="async"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+      </a>
+    )
+  }
+  <div class="flex flex-col flex-1 p-5 sm:p-8">
+    <time datetime={post.publishDate.toISOString()} class="mb-2 text-muted dark:text-slate-400 text-sm">
+      {formatPostDate(post.publishDate, post.lang)}
+    </time>
+    <h2
+      class="mb-3 font-bold text-gray-900 group-hover:text-primary dark:group-hover:text-blue-300 dark:text-white text-lg sm:text-xl transition-colors duration-300"
+    >
+      <a href={href}>{post.title}</a>
+    </h2>
+    <p class="flex-1 mb-5 text-muted dark:text-slate-400 text-sm leading-relaxed">{post.excerpt}</p>
+    <a
+      href={href}
+      class="inline-flex items-center gap-1.5 font-semibold text-primary dark:text-blue-300 text-sm hover:underline"
+    >
+      {readMoreLabel}
+      <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+    </a>
+  </div>
+</article>

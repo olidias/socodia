@@ -27,13 +27,16 @@ export interface Props {
   showRssFeed?: boolean;
   position?: string;
   showNavigation: boolean;
+  /** Restricts the language picker, e.g. to the languages an article has been translated into. */
+  availableLangs?: Array<string>;
 }
 
 const {
   isSticky = false,
   showToggleTheme = false,
   position = 'center',
-  showNavigation
+  showNavigation,
+  availableLangs
 } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
@@ -45,24 +48,16 @@ const anchor = (hash: string) => `${homeBase}#${hash}`;
 
 const links = [
     {
-      textKey: 'header.useCases',
-      href: anchor('use-cases'),
-    },
-    {
-      textKey: 'header.procedure',
-      href: anchor('procedure'),
-    },
-    {
-      textKey: 'header.tools',
-      href: anchor('tools'),
-    },
-    {
       textKey: 'header.about',
       href: anchor('about'),
     },
     {
       textKey: 'projects.title',
       href: `${langPrefix}/projects`,
+    },
+    {
+      textKey: 'header.blog',
+      href: `${langPrefix}/blog`,
     },
     {
       textKey: 'header.contact',
@@ -84,7 +79,7 @@ const links = [
         <Logo />
       </a>
       <div class="md:hidden flex items-center">
-        {<LanguagePicker url={Astro.url} client:visible/>}
+        {<LanguagePicker url={Astro.url} availableLangs={availableLangs} client:visible/>}
         {showToggleTheme && <ToggleTheme />}
         {showNavigation && <ToggleMenu />}
       </div>
@@ -111,7 +106,7 @@ const links = [
     </nav>
     <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
       <div class="hidden md:flex items-center">
-        {<LanguagePicker url={Astro.url} client:visible/>}
+        {<LanguagePicker url={Astro.url} availableLangs={availableLangs} client:visible/>}
         {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
       </div>
     </div>
