@@ -24,7 +24,9 @@ export const ui = {
     'header.contact': 'Contact',
 
     'hero.title': '',
-    'hero.subtitle': 'Solid Software. Competent Consulting.',
+    // Rendered as two separate lines in the hero - keep each part a standalone line.
+    'hero.subtitle.line1': 'Solid Software.',
+    'hero.subtitle.line2': 'Competent Consulting.',
 
     'entry.teaser': 'From concept to production - fullstack development and consulting with senior-level ownership.',
 
