@@ -21,15 +21,12 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Hero2 client:load image="/logo.svg" subtitle={t('hero.subtitle')} >
-  <Fragment slot='title'>
-    <img src="/logo.svg" />
-  </Fragment>
-
-  <Fragment slot='subtitle'>
-    {t('hero.subtitle')}
-  </Fragment>
-</Hero2>
+<Hero2
+  client:load
+  image="/logo.svg"
+  subtitleLine1={t('hero.subtitle.line1')}
+  subtitleLine2={t('hero.subtitle.line2')}
+/>
 
 <Features
   subtitle={t('entry.teaser')}
